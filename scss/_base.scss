@@ -1,0 +1,47 @@
+$main1:#3C3B5C;
+$lightMain1:#565582;
+$darkMain1:#262452;
+$main2:#D53939;
+$main3:#FFB563;
+$main4:#7B3C59;
+$text:#333333;
+$lightText:#666666;
+$hightLightText:#999;
+$darkText:#121212;
+$mainBGColor:#fff;
+$light:#eee;
+
+
+$textFontSize:14px;
+$tipsFontSize:12px;
+$titleFontSize:16px;
+$subTitleFontSize:18px;
+$bigTitleFontSze:20px;
+
+@mixin floatFun(){
+    content: '.';
+    display: block;
+    visibility: hidden;
+    clear: both;
+    width: 100%;
+    height: 0;
+    font-size: 0;
+    zoom: 1;
+}
+@mixin nowrap(){
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+@mixin box(){
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+
+@mixin transite($duration:0.35s){
+	transition: all $duration;
+	-moz-transition: all $duration;
+	-webkit-transition: all $duration;
+	-o-transition: all $duration;
+}
