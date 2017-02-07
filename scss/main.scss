@@ -7,6 +7,7 @@ body{
 	height:58px;
 	width:100%;
 	position: fixed;
+	z-index:10;
 	top:0;
 	left:0;
 	background-color:#fff;
@@ -17,18 +18,17 @@ body{
 		max-width: 1440px;
 		margin: 0 auto;
 		position:relative;
-		&:after{
-			@include floatFun();
-		}
 		.logo{
 			width: auto;
-			float:left;
+			position:absolute;
+			left: 0;
+			top: 0;
 			.logo-title{
 				display: block;
 				background-color:#fff;
 				width: auto;
 				height: 58px;
-				padding:0 30px;
+				padding:0 20px;
 				color: #12c48b;
 				font-weight: bold;
 				font-size: 28px;
@@ -38,20 +38,20 @@ body{
 		}
 		.header-center{
 			width: 960px;
-			position:absolute;
-			left: 50%;
-			margin-left: -480px;
+			height: 58px;
+			margin: 0 auto;
 			.menu-list{
 				width: auto;
 				height: 58px;
 				float:left;
+				transition: margin-left  .35s;
 				a{
 					display: block;
+					height: 58px;
 					padding:0 15px;
-					transition: background-color .25s;
-					font-size: 16px;
-					line-height: 58px;
-					color: #333;
+					text-align: center;
+					transition: background-color .25s;					
+					line-height: 58px;					
 					float:left;
 					cursor: pointer;
 					&.home{
@@ -61,10 +61,25 @@ body{
 						}
 					}
 					&:first-child{
+						margin-left:0;
 						padding-left:0;
+						span,
+						i{
+							color: #12c48b;
+						}
 					}
 					&:hover{
-						background-color:#f9f9f9;
+						background-color:#eee;
+					}
+					i{
+						display: inline-block;
+						margin-right:5px;
+						font-size: 20px;
+						color: #333;
+					}
+					span{
+						font-size: 16px;
+						color: #333;
 					}
 				}
 			}
@@ -110,23 +125,62 @@ body{
 		.user{
 			padding:0 30px;
 			height: 58px;
-			float:right;
-			&.sign{
-				.sign-btn{
+			position:absolute;
+			right: 0;
+			top: 0;
+			&.was-signed{
+				.user-photo{
+					display: block;
+				}
+				.sign{
 					display: none;
 				}
 			}
 			.user-photo{
+				display: none;
 				width: 40px;
 				height: 40px;
 				overflow: hidden;
+				float: left;
 				border-radius: 100%;
-				margin:9px auto;
+				margin:9px 0;
 				position:relative;
 				img{
 					display: block;
 					width: 40px;
 					height: 40px;
+				}
+			}
+			.sign{
+				float: left;
+				background-color:#fff;
+				margin-left: 0;
+				.signin{
+					font-size: 16px;
+					color: #888;
+				}
+			}
+			.package{
+				float: right;
+			}
+			 .common-top-btn{
+				display: inline-block;			
+				width: 98px;
+				height: 36px;
+				background-color:1px solid #12c48b;
+				line-height: 36px;
+				text-align: center;
+				margin: 9px 0 0 40px;
+				border-radius: 4px;
+				font-size: 15px;
+				color: #fff;
+				background-color: #12c48b;
+				transition: background-color .25s;
+				i{
+					margin-right: 5px;
+				}
+				&:hover{
+					background-color:#0cb17c;
 				}
 			}
 		}
@@ -136,11 +190,12 @@ body{
 .left-main{
 	position: fixed;
 	z-index: 9;
-	top: 58px;
+	padding-top: 58px;
 	left: 0;
 	width: 76px;
 	height: 100%;
 	background-color:#12c48b;
+	box-sizing:border-box;
 	.left-menu{
 		width: 100%;
 		height: auto;
@@ -188,8 +243,181 @@ body{
 	height:2000px;
 	width:960px;
 	margin:0 auto;
-	background-color:#f9f9f9;
 	padding-top:59px;
+	.left-block{
+		width: 65%;
+		float:left;
+	}
+	.right-block{
+		width: 30%;
+		float:right;
+	}
+	.main-block{
+		width: 100%;
+		height: auto;
+		&.mt30{
+			margin-top: 30px;
+		}
+		&.mt40{
+			margin-top: 40px;
+		}
+		&:after{
+			@include floatFun();
+		}
+	}
+}
+
+.swiper-container{
+	position:relative;
+	width:100%;
+	height:auto;
+	.swiper-wrapper{
+		width: 100%;
+		height: auto;
+		.swiper-slide{
+			width: 100%;
+			height: auto;
+			a{
+				width: 100%;
+				height: auto;
+				display: block;				
+				img{
+					width: 100%;
+					height: auto;
+					display: block;
+				}
+			}
+		}
+	}
+}
+.other-classical{
+	width: 100%;
+	.other-classical-item{
+		width: 100%;
+		display: block;
+		height: 46px;
+		border-radius:5px;
+		margin-bottom: 10px;
+		background-color:#ddd;
+		color: #666;
+		font-size: 16px;
+		line-height: 46px;
+		text-indent: 20px;		
+		box-sizing:border-box;
+		border:1px solid #d1d1d1;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+
+.list-classical{
+	width: auto;
+	padding:30px 0;
+	&:after{
+		@include floatFun();
+	}
+	li{
+		width: 67px;
+		height: 67px;
+		display: block;
+		float:left;
+		border-radius:5px;
+		overflow: hidden;
+		border:1px solid #ddd;
+		margin-left:20px;
+		&:first-child{
+			margin-left: 0;
+		} 
+		a{
+			display: block;
+			width: 100%;
+			height: 100%;
+			line-height: 65px;
+			text-align: center;
+			position:relative;
+			&:after{
+				content: '';
+				position:absolute;
+				width: 0;
+				left: 50%;
+				height: 0;
+				top: 50%;
+				background-color:transparent;
+				transition:all .25s;
+				z-index: -1;
+			}
+			span{
+				color: #333;
+				transition:color .25s;
+			}
+			&:hover{
+				&:after{left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					background-color: rgba(23,208,149,.2);
+				}
+				span{
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+.main-book-list{
+ 	&:after{
+		@include floatFun();
+	} 
+	.book-item{
+		width: 465px;
+		border-bottom:1px solid #eee;
+		padding:20px 0;
+		float:left;
+		&:nth-child(even){
+			float:right;
+		} 
+		.book-main{
+			&:after{
+				@include floatFun();
+			}
+			.book-img{
+				width: 160px;
+				height: auto;
+				float:left;
+				img{
+					display: block;
+					width: 100%;
+					height: auto;
+				}
+			}
+			.book-profile{
+				width: 305px;
+				float:left;
+				h4{
+					font-size: 16px;
+					color: #333;
+				}
+				p{
+					line-height: 28px;
+					font-size: 14px;
+					color: #555;
+					.name{
+						font-size: color#777;
+						font-size: 14px;
+					}
+					&.owner-profile{
+						padding-top:3px;
+						line-height: 22px;
+						font-size: 12px;
+					}
+				}
+			}
+		}
+		.aid-info{
+			width: 100%;
+		}
+	}
 }
 
 
@@ -197,23 +425,54 @@ body{
 
 
 
-
-
-
-
-
-
-@media screen and (max-width: 1280px) { /*当屏幕尺寸小于600px时，应用下面的CSS样式*/
+@media screen and (max-width: 1280px) {
 	.header .header-main .header-center{
 		width: 756px;
-		margin-left: -378px;
-		.menu-list{
-			margin-left: 65px;
-		}
-	}
+	}	
 	.main{
 		width: 756px;
 	}
+	.other-classical .other-classical-item{
+		height: 34px;
+		line-height: 34px;
+	}
+	.list-classical{
+		height: 50.5px;
+		li{
+			width: 48.5px;
+			height: 48.5px;
+			a{
+				line-height: 48.5px;
+			}
+		}
+	} 
+	.main-book-list .book-item{
+		width: 365px;
+		.book-main{
+			.book-img{
+				width: 120px;
+			}
+			.book-profile{
+				width: 223px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 1080px) {
+	.header .header-main .header-center{
+		.menu-list{
+			margin-left: 70px;
+			a{
+				i{
+					display: inline-block;
+				}
+				span{
+					display: none;
+				}
+			}
+		}
+	}
+
 }
 
 

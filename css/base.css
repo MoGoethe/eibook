@@ -73,6 +73,7 @@ ul,li{
 input,textarea{
   box-shadow: none;
   outline: none;
+  font-family: 'STHeiti','Microsoft YaHei',Helvetica,Arial,sans-serif;
 }
 a {
   text-decoration: none; }
