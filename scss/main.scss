@@ -1,5 +1,7 @@
 @import 'base';
-
+/*
+	index
+*/
 body{
 	position: relative;
 }
@@ -395,8 +397,27 @@ body{
 				width: 305px;
 				float:left;
 				h4{
-					font-size: 16px;
-					color: #333;
+					
+					line-height: 20px;
+					height: 20px;
+					padding:5px 0;
+					.bookname{
+						font-size: 16px;
+						color: #333;
+						float:left;
+					}
+					.classical{
+						padding:0 7px;
+						font-size: 12px;
+						height: 18px;
+						display: block;
+						color: #12c48b;
+						float:left;
+						margin-left: 15px;
+						border-radius:3px;
+						font-weight: normal;
+						border:1px solid #12c48b;
+					}
 				}
 				p{
 					line-height: 28px;
@@ -407,6 +428,8 @@ body{
 						font-size: 14px;
 					}
 					&.owner-profile{
+						height: 72px;
+						overflow: hidden;
 						padding-top:3px;
 						line-height: 22px;
 						font-size: 12px;
@@ -416,6 +439,209 @@ body{
 		}
 		.aid-info{
 			width: 100%;
+			.aids{
+				padding:10px 0;
+				height: 24px;
+				line-height: 24px;
+				.hot,
+				.liks{
+					margin:0 10px;
+					cursor: pointer;
+					font-size: 14px;
+					color: #999;
+					transition: color .25s;
+					i{
+						margin-right: 5px;
+					}
+					&:hover{
+						color: #666;
+					}
+				}
+				.change-now,
+				.buy-now{
+					height: 22px;
+					border:1px solid #12c48b;
+					border-radius:3px;
+					padding:0 12px;
+					line-height: 22px;
+					color: #fff;
+					font-size: 14px;
+					display: inline-block;
+					margin-left: 15px;
+					background-color:#12c48b;
+					cursor: pointer;
+					transition: background-color .35s;
+					&:hover{
+						background-color:#0cb17c;
+						color: #fff;
+					}
+				}
+				.change-now{
+					background-color:#fff;
+					color: #12c48b;
+				}
+			}
+		}
+	}
+}
+
+/*
+	login
+*/
+.login{
+	background-color:#eee;
+	height:100%;
+	width:100%;
+	position:relative;
+	.login-logo{
+		position: absolute;
+		top: 5%;
+		left: 7%;
+		display: block;
+		color: #12c48b;
+		font-weight: bold;
+		cursor: default;
+		font-size: 48px;
+	}
+	.login-content{
+		width: 300px;
+		height: 380px;
+		padding:40px;
+		z-index: 9;
+		position:absolute;
+		background-color:#fff;
+		box-shadow:1px 1px 3px #999,-1px -1px 3px #999;
+		border-radius:7px;
+		left: 50%;
+		top: 50%;
+		margin-top: -290px;
+		margin-left: -200px;
+		.login-main{
+			h2{
+				font-size: 22px;
+				text-align: center;
+				padding:20px 0 40px 0;
+				span{
+					color: #666;
+					margin: 0 10px;
+					&.active{
+						color:#12c48b;
+						border-bottom:2px solid #12c48b;
+					}
+				}
+			}
+			.login-list{
+				position:relative;
+				height: 44px;
+				.input-box{
+					width: 100%;
+					position:absolute;
+					left: 0;
+					top: 0;
+					box-sizing:border-box;
+					height: 44px;
+					line-height: 34px;
+					padding:5px 0 5px 40px;
+					border: 1px solid #ccc;
+					font-size: 14px;
+					border-radius:5px;
+					color: #666;
+					background-color:#f9f9f9;
+					-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+					-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+					transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+					&:focus{
+						border-color: rgba(18,196,139,.8);
+						z-index: 9;
+						-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 5px rgba(18,196,139,.6);
+						box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 5px rgba(18,196,139,.6);
+					}
+					&.user{
+						border-bottom-left-radius:0;
+						border-bottom-right-radius:0;
+					}
+					&.password{
+						border-radius:0;
+					}
+					&.authcode{
+						border-top-left-radius:0;
+						border-top-right-radius:0;
+					}
+				}
+				.input-icon{
+					position: absolute;
+					z-index: 10;
+					left: 0;
+					top: 0;
+					width: 30px;
+					height: 44px;
+					line-height: 44px;
+					text-align: center;
+					margin-left: 8px;
+					font-size: 20px;
+					color: #666;
+				}
+				.login-btn{
+					margin: 15px auto;
+					display: block;
+					width: 236px;
+					height: 38px;
+					line-height: 38px;
+					text-align: center;
+					color: #fff;
+					font-size: 16px;
+					background-color:#12c48b;
+					border-radius:5px;
+					cursor: pointer;
+					transition: background-color .35s;
+					&:hover{
+						background-color:#0cb17c;
+					}
+				}
+			}
+		}
+		.sign-with-otherway{
+			margin-top: 20px;
+			.splice{
+				width: 100%;
+				display: block;
+				line-height: 43px;
+				height: 43px;
+				color: #d1d1d1;
+				text-align: center;
+				position:relative;
+				&:before{
+					content: '';
+					display: block;
+					height: 1px;
+					width: 100%;
+					background-color: #eee;
+					position:absolute;
+					left: 0;
+					top: 21px;
+					z-index: -1;
+				}
+				span{
+					background-color:#fff;
+					display: block;
+					margin: 0 auto;
+					padding:0 5px;
+					font-size: 12px;
+					width: 120px;
+				}
+			}
+			.otherway-list{
+				text-align: center;
+				a{
+					font-size: 22px;
+					color: #999;
+					margin: 0 5px;
+					transition: color .25s;
+					&:hover{
+						color: #333;
+					}
+				}
+			}
 		}
 	}
 }
@@ -424,6 +650,9 @@ body{
 
 
 
+/*
+	@media
+*/
 
 @media screen and (max-width: 1280px) {
 	.header .header-main .header-center{
@@ -454,6 +683,12 @@ body{
 			}
 			.book-profile{
 				width: 223px;
+				p{
+					line-height: 24px;
+					&.owner-profile{
+						height: 46px;
+					}
+				}
 			}
 		}
 	}

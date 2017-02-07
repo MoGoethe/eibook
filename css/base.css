@@ -77,7 +77,7 @@ input,textarea{
 }
 a {
   text-decoration: none; }
-body {font-family: 'STHeiti','Microsoft YaHei',Helvetica,Arial,sans-serif; min-width: 960px }
+body {font-family: 'STHeiti','Microsoft YaHei',Helvetica,Arial,sans-serif; min-width: 960px; }
 .hidden{
   display: none;
 }
