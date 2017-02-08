@@ -40,15 +40,145 @@
 		<div class="notifications">
 			<div class="left-block">
 				<div class="notifications-list">
-					1
+					<div class="notifications-list-item active" id="comment">
+						<a href="#"><i class="icon-comments-alt"></i>评论</a>
+					</div>
+					<div class="notifications-list-item" id="message">
+						<a href="#"><i class="icon-envelope-alt"></i>EI'B 信</a>
+					</div>
+					<div class="notifications-list-item" id="request">
+						<a href="#"><i class="icon-exchange"></i>换书请求</a>
+					</div>
+					<div class="notifications-list-item" id="follow">
+						<a href="#"><i class="icon-bookmark-empty"></i>关注和收藏</a>
+					</div>
+					<div class="notifications-list-item" id="shelve">
+						<a href="#"><i class="icon-upload-alt"></i>旧书上架</a>
+					</div>
+					<div class="notifications-list-item" id="like">
+						<a href="#"><i class="icon-heart-empty"></i>赞和喜欢</a>
+					</div>
+					<div class="notifications-list-item" id="other">
+						<a href="#"><i class="icon-volume-up"></i>其他信息</a>
+					</div>
 				</div>
 			</div>
 			<div class="right-block">
 				<div class="notifications-main-box">
-					2
+					<div class="comment-box">
+						<h4 class="common-notifications-main-box-title">我的收到评论</h4>
+						<div class="box-main">
+							<div class="comment-item">
+								<div class="comment-head">
+									<div class="photo">
+										<img src="./img/photo.png" alt="">
+									</div>
+									<div class="info">
+										<p class="title">seaseeyoul在你上架的<a href="#">《皮囊》</a>中写下一条评论。</p>
+										<p class="time">2017.02.08</p>
+									</div>
+								</div>
+								<p class="comment-text">“亲，请问这本书用可以用什么换呢？我用《哭泣的骆驼》换可以吗？我还有一些其他作者的书，不知道您喜欢什么类型呢？”</p>
+								<div class="comment-tools">
+									<p class="reply-watch">
+										<a href="#" class="reply"><i class="icon-comment-alt"></i>回复</a>
+										<a href="#" class="watch"><i class="icon-share-alt"></i>查看</a>
+										<a href="#" class="delete">删除</a>
+									</p>
+									<div class="reply-box">
+										<div class="list">
+											<textarea name="" id="" cols="30" rows="10"></textarea>
+										</div>
+										<div class="list reply-tool">
+											<span class="expression">☺</span>
+											<span class="notice-info">按下<i>shift+Enter</i>键提交评论</span>
+											<span class="reply-btn">回复</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="comment-item">
+								<div class="comment-head">
+									<div class="photo">
+										<img src="./img/photo.png" alt="">
+									</div>
+									<div class="info">
+										<p class="title">seaseeyoul在你上架的<a href="#">《哭泣的骆驼》</a>中写下一条评论。</p>
+										<p class="time">2017.02.08</p>
+									</div>
+								</div>
+								<p class="comment-text">“亲，请问这本书用可以用什么换呢？我用《哭泣的骆驼》换可以吗？我还有一些其他作者的书，不知道您喜欢什么类型呢？”</p>
+								<div class="comment-tools">
+									<p class="reply-watch">
+										<a href="#" class="reply"><i class="icon-comment-alt"></i>回复</a>
+										<a href="#" class="watch"><i class="icon-share-alt"></i>查看</a>
+										<a href="#" class="delete">删除</a>
+									</p>
+									<div class="reply-box">
+										<div class="list">
+											<textarea name="" id="" cols="30" rows="10"></textarea>
+										</div>
+										<div class="list reply-tool">
+											<span class="expression">☺</span>
+											<span class="notice-info">按下<i>shift+Enter</i>键提交评论</span>
+											<span class="reply-btn">回复</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="comment-item">
+								<div class="comment-head">
+									<div class="photo">
+										<img src="./img/photo.png" alt="">
+									</div>
+									<div class="info">
+										<p class="title">seaseeyoul在你上架的<a href="#">《骆驼祥子》</a>中写下一条评论。</p>
+										<p class="time">2017.02.08</p>
+									</div>
+								</div>
+								<p class="comment-text">“亲，请问这本书用可以用什么换呢？我用《哭泣的骆驼》换可以吗？我还有一些其他作者的书，不知道您喜欢什么类型呢？”</p>
+								<div class="comment-tools">
+									<p class="reply-watch">
+										<a href="#" class="reply"><i class="icon-comment-alt"></i>回复</a>
+										<a href="#" class="watch"><i class="icon-share-alt"></i>查看</a>
+										<a href="#" class="delete">删除</a>
+									</p>
+									<div class="reply-box">
+										<div class="list">
+											<textarea name="" id="" cols="30" rows="10"></textarea>
+										</div>
+										<div class="list reply-tool">
+											<span class="expression">☺</span>
+											<span class="notice-info">按下<i> shift+Enter </i>键提交评论</span>
+											<span class="reply-btn">回复</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="message-box"></div>
+					<div class="request-box"></div>
+					<div class="follow-box"></div>
+					<div class="shelve-box"></div>
+					<div class="like-box"></div>
+					<div class="other-box"></div>
 				</div>
 			</div>		
 		</div>
 	</div>
+<script src="./js/jquery.min.1.9.1.js"></script>
+<script>
+!(function(){
+	$(".reply").on('click',function(){
+		$(this).toggleClass("active");
+		$(this).parents(".comment-item").find(".reply-box").toggleClass("block");
+	});
+	$(".delete").on('click',function(){
+		$(this).parents(".comment-item").remove();
+	})
+})()
+
+</script>
 </body>
 </html>
