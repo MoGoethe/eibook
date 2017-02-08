@@ -81,6 +81,9 @@ body {font-family: 'STHeiti','Microsoft YaHei',Helvetica,Arial,sans-serif; min-w
 .hidden{
   display: none;
 }
+.block{
+  display: block;
+}
 .clearfix {
   display: block;
   height: 0;

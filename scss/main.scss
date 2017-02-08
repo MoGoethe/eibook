@@ -246,15 +246,15 @@ body{
 	width:960px;
 	margin:0 auto;
 	padding-top:59px;
-	.left-block{
-		width: 65%;
-		float:left;
-	}
-	.right-block{
-		width: 30%;
-		float:right;
-	}
-	.main-block{
+	.eibook-block{
+		.left-block{
+			width: 65%;
+			float:left;
+		}
+		.right-block{
+			width: 30%;
+			float:right;
+		}
 		width: 100%;
 		height: auto;
 		&.mt30{
@@ -489,7 +489,7 @@ body{
 	login
 */
 .login{
-	background-color:#eee;
+	background-color:transparent;
 	height:100%;
 	width:100%;
 	position:relative;
@@ -504,13 +504,17 @@ body{
 		font-size: 48px;
 	}
 	.login-content{
+		&.register{
+			height: 422px;
+			margin-top: -320px;
+		}
 		width: 300px;
 		height: 380px;
 		padding:40px;
 		z-index: 9;
 		position:absolute;
 		background-color:#fff;
-		box-shadow:1px 1px 3px #999,-1px -1px 3px #999;
+		box-shadow:1px 1px 3px #bbb,-1px -1px 3px #bbb;
 		border-radius:7px;
 		left: 50%;
 		top: 50%;
@@ -524,10 +528,12 @@ body{
 				span{
 					color: #666;
 					margin: 0 10px;
-					&.active{
-						color:#12c48b;
-						border-bottom:2px solid #12c48b;
-					}
+					color:#12c48b;
+					border-bottom:2px solid #12c48b;
+				}
+				a{
+					color: #666;
+					margin: 0 10px;
 				}
 			}
 			.login-list{
@@ -646,7 +652,31 @@ body{
 	}
 }
 
-
+/*
+	notifications
+*/
+.notifications{
+	.left-block{
+		width: 280px;
+		float: left;
+	}
+	.right-block{
+		width: 650px;
+		float: right;
+	}
+	.notifications-list{
+		height: 500px;
+		width: 280px;
+		position: fixed;
+		top: 0;
+		margin: 89px 0 0;
+	}
+	.notifications-main-box{
+		height: 3000px;
+		margin-top: 30px;
+		width: 100%;
+	}
+}
 
 
 

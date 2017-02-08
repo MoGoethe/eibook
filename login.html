@@ -8,19 +8,17 @@
 	<link rel="stylesheet" href="./css/main.css">
 	<link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.min.css">
 	<style>
-		html,body{
-			background-color: #e9e9e9;
-			width: 100%;
-			height: 100%;
-		}
+		html,body{background-color: #e9e9e9;width: 100%;height: 100%;}
+		.login-bg{position: absolute;left: 0;top: 0;width: 100%;height: 100%; overflow: hidden;}
 	</style>
 </head>
 <body>
+	<div class="login-bg"></div>
 	<div class="login">
 		<span class="login-logo">EI'BOOK</span>
 		<div class="login-content">
 			<div class="login-main">
-				<h2><span class="active">登录</span>·<span>注册</span></h2>
+				<h2><span>登录</span>·<a href="./register.html">注册</a></h2>
 				<div class="login-list">
 					<span class="input-icon"><i class="icon-user"></i></span>
 					<input class="input-box user" type="text" placeholder="用户名">
@@ -49,5 +47,25 @@
 			</div>
 		</div>
 	</div>
+<script src="./lib/particle/dev/particleground.all.js"></script>
+<script>
+!(function(){
+	return new Particleground.wave( '.login-bg', {
+		num: 3,
+		lineColor: ['rgba(0, 190, 112, .5)', 'rgba(0, 190, 112, .7)', 'rgba(0, 190, 112, .9)'],
+		// 三条线依次的边框宽度
+		lineWidth: [ .5, .7, .9 ],
+		// 三条线依次的偏移值
+		offsetLeft: [ 2, 1, 0 ],
+		// 三条线都向下偏移容器高度的0.75倍, [ 0.75, 0.5, 0.3 ]
+		offsetTop: .85,
+		// 三条线依次的波峰高度
+		crestHeight: [ 8, 16, 24 ],
+		// 三条线都只有两个波峰(波纹)
+		rippleNum: 2,
+		speed: .01
+	});
+})()
+</script>
 </body>
 </html>

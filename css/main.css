@@ -203,20 +203,20 @@ body {
   width: 960px;
   margin: 0 auto;
   padding-top: 59px; }
-  .main .left-block {
-    width: 65%;
-    float: left; }
-  .main .right-block {
-    width: 30%;
-    float: right; }
-  .main .main-block {
+  .main .eibook-block {
     width: 100%;
     height: auto; }
-    .main .main-block.mt30 {
+    .main .eibook-block .left-block {
+      width: 65%;
+      float: left; }
+    .main .eibook-block .right-block {
+      width: 30%;
+      float: right; }
+    .main .eibook-block.mt30 {
       margin-top: 30px; }
-    .main .main-block.mt40 {
+    .main .eibook-block.mt40 {
       margin-top: 40px; }
-    .main .main-block:after {
+    .main .eibook-block:after {
       content: '.';
       display: block;
       visibility: hidden;
@@ -429,7 +429,7 @@ body {
 	login
 */
 .login {
-  background-color: #eee;
+  background-color: transparent;
   height: 100%;
   width: 100%;
   position: relative; }
@@ -449,22 +449,27 @@ body {
     z-index: 9;
     position: absolute;
     background-color: #fff;
-    box-shadow: 1px 1px 3px #999,-1px -1px 3px #999;
+    box-shadow: 1px 1px 3px #bbb,-1px -1px 3px #bbb;
     border-radius: 7px;
     left: 50%;
     top: 50%;
     margin-top: -290px;
     margin-left: -200px; }
+    .login .login-content.register {
+      height: 422px;
+      margin-top: -320px; }
     .login .login-content .login-main h2 {
       font-size: 22px;
       text-align: center;
       padding: 20px 0 40px 0; }
       .login .login-content .login-main h2 span {
         color: #666;
+        margin: 0 10px;
+        color: #12c48b;
+        border-bottom: 2px solid #12c48b; }
+      .login .login-content .login-main h2 a {
+        color: #666;
         margin: 0 10px; }
-        .login .login-content .login-main h2 span.active {
-          color: #12c48b;
-          border-bottom: 2px solid #12c48b; }
     .login .login-content .login-main .login-list {
       position: relative;
       height: 44px; }
@@ -558,6 +563,29 @@ body {
           transition: color .25s; }
           .login .login-content .sign-with-otherway .otherway-list a:hover {
             color: #333; }
+
+/*
+	notifications
+*/
+.notifications .left-block {
+  width: 280px;
+  float: left; }
+
+.notifications .right-block {
+  width: 650px;
+  float: right; }
+
+.notifications .notifications-list {
+  height: 500px;
+  width: 280px;
+  position: fixed;
+  top: 0;
+  margin: 89px 0 0; }
+
+.notifications .notifications-main-box {
+  height: 3000px;
+  margin-top: 30px;
+  width: 100%; }
 
 /*
 	@media

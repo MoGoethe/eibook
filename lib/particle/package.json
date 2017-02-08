@@ -1,0 +1,34 @@
+{
+  "name": "Particleground.js",
+  "description": "A concise, efficient, and lightweight canvas plugin for building some cool particle effects.",
+  "version": "1.1.0",
+  "main": "production/particleground.all.js",
+  "scripts": {
+    "dev": "gulp pack-pjs",
+    "prod": "gulp build-prod"
+  },
+  "devDependencies": {
+    "eslint": "^3.9.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-eslint": "^3.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3",
+    "gulp-zip": "^3.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Barrior/Particleground.js.git"
+  },
+  "author": "Barrior",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Barrior/Particleground.js/issues"
+  },
+  "homepage": "pjs.barrior.me",
+  "keywords": [
+    "pjs",
+    "Particleground.js",
+    "Particle effects"
+  ]
+}
