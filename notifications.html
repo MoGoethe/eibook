@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="./css/common.min.css">
 	<link rel="stylesheet" href="./css/notifications.min.css">
 	<link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./css/media-query.min.css">
 </head>
 <body>
 	<div class="header">
@@ -41,32 +42,32 @@
 		<div class="notifications">
 			<div class="left-block">
 				<div class="notifications-list">
-					<div class="notifications-list-item active" id="comment">
+					<div class="notifications-list-item active" data-box-name="comment-box">
 						<a href="#"><i class="icon-comments-alt"></i>评论</a>
 					</div>
-					<div class="notifications-list-item" id="message">
+					<div class="notifications-list-item" data-box-name="message-box">
 						<a href="#"><i class="icon-envelope-alt"></i>EI'B 信</a>
 					</div>
-					<div class="notifications-list-item" id="request">
+					<div class="notifications-list-item" data-box-name="request-box">
 						<a href="#"><i class="icon-exchange"></i>换书请求</a>
 					</div>
-					<div class="notifications-list-item" id="follow">
+					<div class="notifications-list-item" data-box-name="follow-box">
 						<a href="#"><i class="icon-bookmark-empty"></i>关注和收藏</a>
 					</div>
-					<div class="notifications-list-item" id="shelve">
+					<div class="notifications-list-item" data-box-name="shelve-box">
 						<a href="#"><i class="icon-upload-alt"></i>旧书上架</a>
 					</div>
-					<div class="notifications-list-item" id="like">
+					<div class="notifications-list-item" data-box-name="like-box">
 						<a href="#"><i class="icon-heart-empty"></i>赞和喜欢</a>
 					</div>
-					<div class="notifications-list-item" id="other">
+					<div class="notifications-list-item" data-box-name="other-box">
 						<a href="#"><i class="icon-volume-up"></i>其他信息</a>
 					</div>
 				</div>
 			</div>
 			<div class="right-block">
 				<div class="notifications-main-box">
-					<div class="comment-box">
+					<div class="notifications-main-box-item comment-box block">
 						<h4 class="common-notifications-main-box-title">我的收到评论</h4>
 						<div class="box-main">
 							<div class="comment-item">
@@ -86,7 +87,7 @@
 										<a href="#" class="watch"><i class="icon-share-alt"></i>查看</a>
 										<a href="#" class="delete">删除</a>
 									</p>
-									<div class="reply-box">
+									<div class="common-reply-box">
 										<div class="list">
 											<textarea name="" id="" cols="30" rows="10"></textarea>
 										</div>
@@ -115,7 +116,7 @@
 										<a href="#" class="watch"><i class="icon-share-alt"></i>查看</a>
 										<a href="#" class="delete">删除</a>
 									</p>
-									<div class="reply-box">
+									<div class="common-reply-box">
 										<div class="list">
 											<textarea name="" id="" cols="30" rows="10"></textarea>
 										</div>
@@ -144,7 +145,7 @@
 										<a href="#" class="watch"><i class="icon-share-alt"></i>查看</a>
 										<a href="#" class="delete">删除</a>
 									</p>
-									<div class="reply-box">
+									<div class="common-reply-box">
 										<div class="list">
 											<textarea name="" id="" cols="30" rows="10"></textarea>
 										</div>
@@ -158,14 +159,59 @@
 							</div>
 						</div>
 					</div>
-					<div class="message-box block">
-						
+					<div class="notifications-main-box-item message-box">
+						<h4 class="common-notifications-main-box-title">全部消息</h4>
+						<div class="message-from-list">
+							<div class="message-from-item">
+								<div class="message-main">
+									<div class="photo">
+										<img src="./img/photo.png" alt="">
+									</div>
+									<div class="detail">
+										<p class="from-user">Li木木 <span class="time">01.11 09:03 <i class="icon-angle-down"></i></span></p>
+										<p class="text">小胖友，你是？</p>
+									</div>
+								</div>
+								<div class="manage-tools">
+									<span class="remove"><i class="icon-remove-sign"></i>删除</span>
+									<span class="minus"><i class="icon-minus-sign"></i>加入黑名单</span>
+									<span class="exclamation"><i class="icon-exclamation-sign"></i>举报</span>
+								</div>
+							</div>
+						</div>
+						<div class="message-detail-box">
+							<div class="message-detail-list">
+								<a href="#" class="load-more">点击加载更多</a>
+								<div class="message-detail msg-from">
+									<p class="time"><span>昨天 08：09</span></p>
+									<div class="text-content">
+										<p>您好！</p>
+									</div>
+								</div>
+								<div class="message-detail msg-to">
+									<p class="time"><span>昨天 08：09</span></p>
+									<div class="text-content">
+										<p>您好！</p>
+									</div>
+								</div>
+							</div>
+							<div class="common-reply-box block">
+								<div class="list">
+									<textarea name="" id="" cols="30" rows="10" placeholder=":message:"></textarea>
+								</div>
+								<div class="list reply-tool">
+									<span class="expression">☺</span>
+									<span class="notice-info">按下 <i>shift+Enter</i> 提交回复</span>
+									<span class="reply-btn">回复</span>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="request-box"></div>
-					<div class="follow-box"></div>
-					<div class="shelve-box"></div>
-					<div class="like-box"></div>
-					<div class="other-box"></div>
+					<div class="notifications-main-box-item request-box"></div>
+					<div class="notifications-main-box-item follow-box"></div>
+					<div class="notifications-main-box-item shelve-box"></div>
+					<div class="notifications-main-box-item like-box"></div>
+					<div class="notifications-main-box-item other-box"></div>
 				</div>
 			</div>		
 		</div>
@@ -175,13 +221,18 @@
 !(function(){
 	$(".reply").on('click',function(){
 		$(this).toggleClass("active");
-		$(this).parents(".comment-item").find(".reply-box").toggleClass("block");
+		$(this).parents(".comment-item").find(".common-reply-box").toggleClass("block");
 	});
 	$(".delete").on('click',function(){
 		$(this).parents(".comment-item").remove();
 	})
 })()
 
+$(".notifications-list-item").on('click',function(){
+	$(this).addClass("active").siblings().removeClass("active");
+	$(".notifications-main-box-item").removeClass("block");
+	$("."+$(this).attr("data-box-name")).addClass("block");
+})
 </script>
 </body>
 </html>
