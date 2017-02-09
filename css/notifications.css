@@ -49,6 +49,7 @@
     padding-bottom: 10px;
     border-bottom: 1px solid #eee; }
   .notifications .notifications-main-box .comment-box {
+    display: none;
     padding-top: 20px; }
     .notifications .notifications-main-box .comment-box .comment-item {
       padding: 20px 0;
