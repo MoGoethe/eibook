@@ -77,18 +77,7 @@ input,textarea{
 }
 a {
   text-decoration: none; }
-body {font-family: 'STHeiti','Microsoft YaHei',Helvetica,Arial,sans-serif; min-width: 960px; }
-.hidden{
-  display: none;
-}
-.block{
-  display: block !important;
-}
-.clearfix {
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden; }
+
+
 
 

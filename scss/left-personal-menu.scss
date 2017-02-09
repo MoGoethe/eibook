@@ -1,0 +1,52 @@
+@import 'base';
+.left-main{
+	position: fixed;
+	z-index: 9;
+	padding-top: 58px;
+	left: 0;
+	width: 76px;
+	height: 100%;
+	background-color:$mainColor;
+	box-sizing:border-box;
+	.left-menu{
+		width: 100%;
+		height: auto;
+		margin-top: 76px;
+		.item{
+			width: 73px;
+			height: 75px;
+			text-align: center;
+			line-height: 75px;
+			font-size: 20px;
+			color: #fff;
+			cursor: pointer;
+			transition:background-color .25s;
+			border-left:3px solid $mainColor;
+			border-bottom:1px solid #17d095;
+			&:hover{
+				background-color:$darkColor;
+			}
+			&:first-child{
+				border-top:1px solid #17d095;
+			}
+			&.red{
+				border-left-color:red;
+			}
+			&.orange{
+				border-left-color:orange;
+			}
+			&.yellow{
+				border-left-color:yellow;
+			}
+			&.green{
+				border-left-color:green;
+			}
+			&.violet{
+				border-left-color:violet;
+			}
+			&.blue{
+				border-left-color:blue;
+			}
+		}
+	}
+}

@@ -1,22 +1,7 @@
-$main1:#3C3B5C;
-$lightMain1:#565582;
-$darkMain1:#262452;
-$main2:#D53939;
-$main3:#FFB563;
-$main4:#7B3C59;
-$text:#333333;
-$lightText:#666666;
-$hightLightText:#999;
-$darkText:#121212;
-$mainBGColor:#fff;
-$light:#eee;
-
-
-$textFontSize:14px;
-$tipsFontSize:12px;
-$titleFontSize:16px;
-$subTitleFontSize:18px;
-$bigTitleFontSze:20px;
+$mainColor:#12c48b;
+$lightColor:#32dca6;
+$darkColor:#0cb17c;
+$mainColorRGB:rgb(18,196,139);
 
 @mixin floatFun(){
     content: '.';
@@ -39,9 +24,9 @@ $bigTitleFontSze:20px;
 	-webkit-box-sizing:border-box;
 }
 
-@mixin transite($duration:0.35s){
-	transition: all $duration;
-	-moz-transition: all $duration;
-	-webkit-transition: all $duration;
-	-o-transition: all $duration;
+@mixin transite($attrName:all,$duration:0.35s){
+	transition: $attrName $duration;
+	-moz-transition: $attrName $duration;
+	-webkit-transition: $attrName $duration;
+	-o-transition: $attrName $duration;
 }
