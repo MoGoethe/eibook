@@ -42,10 +42,10 @@
 		<div class="notifications">
 			<div class="left-block">
 				<div class="notifications-list">
-					<div class="notifications-list-item active" data-box-name="comment-box">
+					<div class="notifications-list-item" data-box-name="comment-box">
 						<a href="#"><i class="icon-comments-alt"></i>评论</a>
 					</div>
-					<div class="notifications-list-item" data-box-name="message-box">
+					<div class="notifications-list-item active" data-box-name="message-box">
 						<a href="#"><i class="icon-envelope-alt"></i>EI'B 信</a>
 					</div>
 					<div class="notifications-list-item" data-box-name="request-box">
@@ -67,7 +67,7 @@
 			</div>
 			<div class="right-block">
 				<div class="notifications-main-box">
-					<div class="notifications-main-box-item comment-box block">
+					<div class="notifications-main-box-item comment-box">
 						<h4 class="common-notifications-main-box-title">我的收到评论</h4>
 						<div class="box-main">
 							<div class="comment-item">
@@ -159,9 +159,73 @@
 							</div>
 						</div>
 					</div>
-					<div class="notifications-main-box-item message-box">
+					<div class="notifications-main-box-item message-box block">
 						<h4 class="common-notifications-main-box-title">全部消息</h4>
 						<div class="message-from-list">
+							<div class="message-from-item">
+								<div class="message-main">
+									<div class="photo">
+										<img src="./img/photo.png" alt="">
+									</div>
+									<div class="detail">
+										<p class="from-user">Li木木 <span class="time">01.11 09:03 <i class="icon-angle-down"></i></span></p>
+										<p class="text">小胖友，你是？</p>
+									</div>
+								</div>
+								<div class="manage-tools">
+									<span class="remove"><i class="icon-remove-sign"></i>删除</span>
+									<span class="minus"><i class="icon-minus-sign"></i>加入黑名单</span>
+									<span class="exclamation"><i class="icon-exclamation-sign"></i>举报</span>
+								</div>
+							</div>
+							<div class="message-from-item">
+								<div class="message-main">
+									<div class="photo">
+										<img src="./img/photo.png" alt="">
+									</div>
+									<div class="detail">
+										<p class="from-user">Li木木 <span class="time">01.11 09:03 <i class="icon-angle-down"></i></span></p>
+										<p class="text">小胖友，你是？</p>
+									</div>
+								</div>
+								<div class="manage-tools">
+									<span class="remove"><i class="icon-remove-sign"></i>删除</span>
+									<span class="minus"><i class="icon-minus-sign"></i>加入黑名单</span>
+									<span class="exclamation"><i class="icon-exclamation-sign"></i>举报</span>
+								</div>
+							</div>
+							<div class="message-from-item">
+								<div class="message-main">
+									<div class="photo">
+										<img src="./img/photo.png" alt="">
+									</div>
+									<div class="detail">
+										<p class="from-user">Li木木 <span class="time">01.11 09:03 <i class="icon-angle-down"></i></span></p>
+										<p class="text">小胖友，你是？</p>
+									</div>
+								</div>
+								<div class="manage-tools">
+									<span class="remove"><i class="icon-remove-sign"></i>删除</span>
+									<span class="minus"><i class="icon-minus-sign"></i>加入黑名单</span>
+									<span class="exclamation"><i class="icon-exclamation-sign"></i>举报</span>
+								</div>
+							</div>
+							<div class="message-from-item">
+								<div class="message-main">
+									<div class="photo">
+										<img src="./img/photo.png" alt="">
+									</div>
+									<div class="detail">
+										<p class="from-user">Li木木 <span class="time">01.11 09:03 <i class="icon-angle-down"></i></span></p>
+										<p class="text">小胖友，你是？</p>
+									</div>
+								</div>
+								<div class="manage-tools">
+									<span class="remove"><i class="icon-remove-sign"></i>删除</span>
+									<span class="minus"><i class="icon-minus-sign"></i>加入黑名单</span>
+									<span class="exclamation"><i class="icon-exclamation-sign"></i>举报</span>
+								</div>
+							</div>
 							<div class="message-from-item">
 								<div class="message-main">
 									<div class="photo">
@@ -233,6 +297,16 @@ $(".notifications-list-item").on('click',function(){
 	$(".notifications-main-box-item").removeClass("block");
 	$("."+$(this).attr("data-box-name")).addClass("block");
 })
+
+$(".time").on('click',function(){
+	$(".manage-tools").removeClass("block");
+	$(this).parents(".message-from-item").find(".manage-tools").addClass("block");
+})
+
+$(".remove").on('click',function(){
+	$(this).parents(".message-from-item").remove();
+})
+
 </script>
 </body>
 </html>

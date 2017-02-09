@@ -123,7 +123,15 @@
     display: none; }
     .notifications .notifications-main-box .message-box .message-from-list .message-from-item {
       position: relative;
-      padding: 20px 0; }
+      padding: 20px 0;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+      transition: border-bottom-color 0.35s;
+      -moz-transition: border-bottom-color 0.35s;
+      -webkit-transition: border-bottom-color 0.35s;
+      -o-transition: border-bottom-color 0.35s; }
+      .notifications .notifications-main-box .message-box .message-from-list .message-from-item:hover {
+        border-bottom-color: #ccc; }
       .notifications .notifications-main-box .message-box .message-from-list .message-from-item .message-main {
         position: relative; }
         .notifications .notifications-main-box .message-box .message-from-list .message-from-item .message-main .photo {
@@ -151,9 +159,11 @@
             .notifications .notifications-main-box .message-box .message-from-list .message-from-item .message-main .detail .from-user .time {
               margin-right: 10px;
               float: right;
-              color: #333;
-              font-size: 15px;
+              color: #999;
+              font-size: 13px;
               cursor: pointer; }
+              .notifications .notifications-main-box .message-box .message-from-list .message-from-item .message-main .detail .from-user .time:hover {
+                color: #333; }
           .notifications .notifications-main-box .message-box .message-from-list .message-from-item .message-main .detail .text {
             height: 18px;
             line-height: 18px;
@@ -164,21 +174,36 @@
             text-overflow: ellipsis; }
       .notifications .notifications-main-box .message-box .message-from-list .message-from-item .manage-tools {
         position: absolute;
-        top: 50px;
-        right: 0;
+        top: 58px;
+        right: -44px;
         width: 118px;
+        background-color: #fff;
         border: 1px solid #ccc;
         border-radius: 5px;
-        position: relative; }
+        z-index: 11;
+        display: none; }
         .notifications .notifications-main-box .message-box .message-from-list .message-from-item .manage-tools:after {
           content: '';
           display: block;
           width: 0;
           height: 0;
-          bolder: 7px solid #eee;
-          border-color: transparent transparent #eee transparent;
+          border: 7px solid #ccc;
+          border-color: transparent transparent #ccc transparent;
           left: 53px;
-          top: -14px; }
+          top: -14px;
+          position: absolute;
+          z-index: 8; }
+        .notifications .notifications-main-box .message-box .message-from-list .message-from-item .manage-tools:before {
+          content: '';
+          display: block;
+          width: 0;
+          height: 0;
+          border: 5px solid #fff;
+          border-color: transparent transparent #fff transparent;
+          left: 55px;
+          top: -10px;
+          position: absolute;
+          z-index: 9; }
         .notifications .notifications-main-box .message-box .message-from-list .message-from-item .manage-tools span {
           display: block;
           width: 100%;

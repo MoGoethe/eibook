@@ -142,6 +142,12 @@
 				.message-from-item{
 					position:relative;
 					padding:20px 0;
+					border-bottom:1px solid #eee;
+					cursor: pointer;
+					@include transite(border-bottom-color,.35s);
+					&:hover{
+						border-bottom-color:#ccc;
+					}
 					.message-main{
 						position:relative;
 						.photo{
@@ -171,9 +177,12 @@
 								.time{
 									margin-right: 10px;
 									float: right;
-									color: #333;
-									font-size: 15px;
+									color: #999;
+									font-size: 13px;
 									cursor: pointer;
+									&:hover{
+										color: #333;
+									}
 								}
 							}
 							.text{
@@ -187,21 +196,37 @@
 					}
 					.manage-tools{
 						position:absolute;
-						top: 50px;
-						right: 0;
+						top: 58px;
+						right: -44px;
 						width: 118px;
+						background-color:#fff;
 						border:1px solid #ccc;
 						border-radius:5px;
-						position: relative;
+						z-index: 11;
+						display: none;
 						&:after{
 							content: '';
 							display: block;
 							width: 0;
 							height: 0;
-							bolder:7px solid #eee;
-							border-color:transparent transparent #eee transparent;
+							border:7px solid #ccc;
+							border-color:transparent transparent #ccc transparent;
 							left: 53px;
 							top: -14px;
+							position:absolute;
+							z-index: 8;
+						}
+						&:before{
+							content: '';
+							display: block;
+							width: 0;
+							height: 0;
+							border:5px solid #fff;
+							border-color:transparent transparent #fff transparent;
+							left: 55px;
+							top: -10px;
+							position:absolute;
+							z-index: 9;
 						}
 						span{
 							display: block;
