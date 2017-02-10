@@ -2,7 +2,15 @@
 body {
   font-family: 'STHeiti','Microsoft YaHei',Helvetica,Arial,sans-serif;
   min-width: 960px;
-  position: relative; }
+  position: relative;
+  -moz-user-select: none;
+  /*火狐*/
+  -webkit-user-select: none;
+  /*webkit浏览器*/
+  -ms-user-select: none;
+  /*IE10*/
+  /*早期浏览器*/
+  user-select: none; }
 
 .hidden {
   display: none !important; }
@@ -247,3 +255,80 @@ body {
         height: 0;
         font-size: 0;
         zoom: 1; }
+
+/*
+	公用加载动画 
+*/
+.load-animate {
+  font-size: 0;
+  line-height: 20px;
+  height: 20px;
+  width: 100%; }
+  .load-animate p {
+    text-align: center;
+    width: 100%;
+    display: block;
+    color: #999;
+    font-size: 12px;
+    margin-left: 10px; }
+    .load-animate p img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      vertical-align: middle; }
+
+.common-systemsg-list {
+  height: auto;
+  width: 100%; }
+  .common-systemsg-list .systemsg-list-item {
+    height: 40px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    width: 100%;
+    padding: 20px 0; }
+    .common-systemsg-list .systemsg-list-item:hover {
+      border-bottom-color: #ccc; }
+    .common-systemsg-list .systemsg-list-item:after {
+      content: '.';
+      display: block;
+      visibility: hidden;
+      clear: both;
+      width: 100%;
+      height: 0;
+      font-size: 0;
+      zoom: 1; }
+    .common-systemsg-list .systemsg-list-item .photo {
+      width: 40px;
+      float: left;
+      height: 40px;
+      border-radius: 100%;
+      overflow: hidden;
+      position: absolute;
+      left: 0;
+      top: 20px; }
+      .common-systemsg-list .systemsg-list-item .photo img {
+        display: block;
+        width: 40px;
+        height: 40px; }
+    .common-systemsg-list .systemsg-list-item .info {
+      width: 100%;
+      height: 40px;
+      padding-left: 55px;
+      box-sizing: border-box; }
+      .common-systemsg-list .systemsg-list-item .info .text {
+        font-size: 15px;
+        display: block;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #333;
+        line-height: 22px; }
+        .common-systemsg-list .systemsg-list-item .info .text .blue {
+          color: #43a5ec; }
+        .common-systemsg-list .systemsg-list-item .info .text a {
+          color: #12c48b; }
+      .common-systemsg-list .systemsg-list-item .info .time {
+        line-height: 20px;
+        color: #999;
+        font-size: 12px; }

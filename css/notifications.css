@@ -3,8 +3,8 @@
 	功能页
 */
 .notifications .left-block {
-  width: 280px;
-  height: 280px;
+  width: 260px;
+  height: 260px;
   float: left; }
 
 .notifications .right-block {
@@ -12,7 +12,7 @@
   float: right; }
 
 .notifications .notifications-list {
-  width: 280px;
+  width: 260px;
   position: fixed;
   top: 0;
   margin: 89px 0 0; }
@@ -49,6 +49,54 @@
     color: #333;
     padding-bottom: 10px;
     border-bottom: 1px solid #eee; }
+    .notifications .notifications-main-box .common-notifications-main-box-title.tools-title .title-text {
+      display: none; }
+    .notifications .notifications-main-box .common-notifications-main-box-title.tools-title .tools-title-main {
+      display: block; }
+    .notifications .notifications-main-box .common-notifications-main-box-title .tools-title-main {
+      display: none;
+      width: 100%;
+      height: 30px;
+      line-height: 30px;
+      position: relative; }
+      .notifications .notifications-main-box .common-notifications-main-box-title .tools-title-main:after {
+        content: '.';
+        display: block;
+        visibility: hidden;
+        clear: both;
+        width: 100%;
+        height: 0;
+        font-size: 0;
+        zoom: 1; }
+      .notifications .notifications-main-box .common-notifications-main-box-title .tools-title-main .back {
+        font-size: 14px;
+        color: #999;
+        display: block;
+        float: left;
+        font-weight: normal;
+        margin: 0 5px;
+        cursor: pointer; }
+        .notifications .notifications-main-box .common-notifications-main-box-title .tools-title-main .back:hover {
+          color: #666; }
+        .notifications .notifications-main-box .common-notifications-main-box-title .tools-title-main .back i {
+          margin-right: 3px; }
+      .notifications .notifications-main-box .common-notifications-main-box-title .tools-title-main .from-tools-title {
+        font-size: 14px;
+        color: #333;
+        position: absolute;
+        left: 0;
+        top: 0;
+        line-height: 30px;
+        height: 30%;
+        width: 100%;
+        text-align: center;
+        display: block;
+        z-index: -1;
+        font-weight: bolder; }
+      .notifications .notifications-main-box .common-notifications-main-box-title .tools-title-main .tools-title-main-icon {
+        float: right;
+        padding: 10px;
+        margin: 0 5px; }
   .notifications .notifications-main-box .comment-box {
     display: none; }
     .notifications .notifications-main-box .comment-box .comment-item {
@@ -73,15 +121,15 @@
           float: left;
           height: 40px;
           border-radius: 100%;
-          overflow: hidden; }
+          overflow: hidden;
+          position: absolute;
+          left: 0;
+          top: 0; }
           .notifications .notifications-main-box .comment-box .comment-item .comment-head .photo img {
             display: block;
             width: 40px;
             height: 40px; }
         .notifications .notifications-main-box .comment-box .comment-item .comment-head .info {
-          position: absolute;
-          right: 0;
-          top: 0;
           width: 100%;
           height: 40px;
           padding-left: 55px;
@@ -133,22 +181,23 @@
       .notifications .notifications-main-box .message-box .message-from-list .message-from-item:hover {
         border-bottom-color: #ccc; }
       .notifications .notifications-main-box .message-box .message-from-list .message-from-item .message-main {
-        position: relative; }
+        position: relative;
+        height: 48px;
+        width: 100%; }
         .notifications .notifications-main-box .message-box .message-from-list .message-from-item .message-main .photo {
           width: 48px;
           height: 48px;
+          position: absolute;
           border-radius: 100%;
+          border: 1px solid #f9f9f9;
           overflow: hidden; }
           .notifications .notifications-main-box .message-box .message-from-list .message-from-item .message-main .photo img {
             display: block;
             width: 48px;
             height: 48px; }
         .notifications .notifications-main-box .message-box .message-from-list .message-from-item .message-main .detail {
-          position: absolute;
-          right: 0;
-          top: 0;
           width: 100%;
-          height: 40px;
+          height: 50px;
           padding-left: 63px;
           box-sizing: border-box; }
           .notifications .notifications-main-box .message-box .message-from-list .message-from-item .message-main .detail .from-user {
@@ -165,8 +214,8 @@
               .notifications .notifications-main-box .message-box .message-from-list .message-from-item .message-main .detail .from-user .time:hover {
                 color: #333; }
           .notifications .notifications-main-box .message-box .message-from-list .message-from-item .message-main .detail .text {
-            height: 18px;
-            line-height: 18px;
+            height: 20px;
+            line-height: 20px;
             color: #999;
             font-size: 12px;
             white-space: nowrap;
@@ -225,3 +274,81 @@
             margin-right: 5px; }
     .notifications .notifications-main-box .message-box .message-detail-box {
       display: none; }
+      .notifications .notifications-main-box .message-box .message-detail-box .message-detail-list .load-box {
+        text-align: center;
+        position: relative;
+        padding: 10px 0; }
+        .notifications .notifications-main-box .message-box .message-detail-box .message-detail-list .load-box .load-more-btn {
+          cursor: pointer;
+          color: #43a5ec;
+          font-size: 14px;
+          cursor: pointer; }
+          .notifications .notifications-main-box .message-box .message-detail-box .message-detail-list .load-box .load-more-btn:hover {
+            text-decoration: underline; }
+      .notifications .notifications-main-box .message-box .message-detail-box .message-detail-list .message-detail {
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+        padding: 15px 60px; }
+        .notifications .notifications-main-box .message-box .message-detail-box .message-detail-list .message-detail .time {
+          text-align: center;
+          padding: 10px 0; }
+          .notifications .notifications-main-box .message-box .message-detail-box .message-detail-list .message-detail .time span {
+            background-color: #e0e0e0;
+            padding: 3px 12px;
+            border-radius: 3px;
+            font-size: 12px;
+            color: #999;
+            overflow: hidden; }
+        .notifications .notifications-main-box .message-box .message-detail-box .message-detail-list .message-detail.msg-from .message-main .photo {
+          left: -60px; }
+        .notifications .notifications-main-box .message-box .message-detail-box .message-detail-list .message-detail.msg-from .message-main .text-content {
+          background-color: #43a5ec; }
+          .notifications .notifications-main-box .message-box .message-detail-box .message-detail-list .message-detail.msg-from .message-main .text-content:before {
+            border-color: transparent #43a5ec transparent transparent;
+            left: -14px; }
+        .notifications .notifications-main-box .message-box .message-detail-box .message-detail-list .message-detail.msg-to .message-main .photo {
+          right: -60px; }
+        .notifications .notifications-main-box .message-box .message-detail-box .message-detail-list .message-detail.msg-to .message-main .text-content {
+          background-color: #12c48b; }
+          .notifications .notifications-main-box .message-box .message-detail-box .message-detail-list .message-detail.msg-to .message-main .text-content:before {
+            border-color: transparent transparent transparent #12c48b;
+            right: -14px; }
+        .notifications .notifications-main-box .message-box .message-detail-box .message-detail-list .message-detail .message-main {
+          width: 100%;
+          position: relative; }
+          .notifications .notifications-main-box .message-box .message-detail-box .message-detail-list .message-detail .message-main .photo {
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            overflow: hidden;
+            border: 1px solid #f9f9f9;
+            position: absolute;
+            top: 0; }
+            .notifications .notifications-main-box .message-box .message-detail-box .message-detail-list .message-detail .message-main .photo img {
+              display: block;
+              width: 40px;
+              height: 40px; }
+          .notifications .notifications-main-box .message-box .message-detail-box .message-detail-list .message-detail .message-main .text-content {
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #eee;
+            padding: 10px 15px;
+            border-radius: 5px;
+            position: relative; }
+            .notifications .notifications-main-box .message-box .message-detail-box .message-detail-list .message-detail .message-main .text-content:before {
+              content: '';
+              position: absolute;
+              width: 0;
+              height: 0;
+              border: 7px solid transparent;
+              top: 14px; }
+            .notifications .notifications-main-box .message-box .message-detail-box .message-detail-list .message-detail .message-main .text-content p {
+              color: #333;
+              font-size: 14px;
+              line-height: 24px;
+              color: #fff; }
+  .notifications .notifications-main-box .follow-box {
+    display: none; }
+  .notifications .notifications-main-box .like-box {
+    display: none; }
