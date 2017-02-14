@@ -1,9 +1,9 @@
 var express = require('express');
 
+var action = require('../action/loginAction');
 var router = express.Router();
-router.get('/login', function(req, res, next) {
-	res.writeHead(200,{'Content-Type':'text/html'});
-	res.send('login');
+router.get('/', function(req, res, next) {
+         action(req,res,next);
 });
 
 module.exports = router;
