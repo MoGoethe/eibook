@@ -4,12 +4,15 @@
 	功能页
 */
 .notifications{
-	.left-block{
+	&:after{
+		@include floatFun();
+	}
+	.left-fixed-menu{
 		width: 260px;
 		height: 260px;
 		float: left;
 	}
-	.right-block{
+	.right-box-main{
 		width: 650px;
 		float: right;
 	}
@@ -410,20 +413,18 @@
 				}
 			}
 		}
-		.request-box{
-
-		}
+		.like-box,
 		.follow-box{
 			display: none;
 		}
+		.request-box{
+			display: none;
+		}		
 		.shelve-box{
-
-		}
-		.like-box{
 			display: none;
 		}
 		.other-box{
-
+			display: none;
 		}
 	}
 }

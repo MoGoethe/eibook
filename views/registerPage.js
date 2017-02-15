@@ -3,21 +3,16 @@
 var abstructPage = require("./abstructClass2");
 
 class LoginPage extends abstructPage{
-/*
-	constructor(args){
-		super();
-		this.args = args;
-	}
-*/
+
 	constructor(){
 		super();
 	}
 
 	_render(){
 		return `
-		<div class="login-content">
+		<div class="login-content register">
 			<div class="login-main">
-				<h2><span>登录</span>·<a href="./register.html">注册</a></h2>
+				<h2><a href="./login.html">登录</a>·<span>注册</span></h2>
 				<div class="login-list">
 					<span class="input-icon"><i class="icon-user"></i></span>
 					<input class="input-box user" type="text" placeholder="用户名">
@@ -27,11 +22,15 @@ class LoginPage extends abstructPage{
 					<input class="input-box password" type="text" placeholder="密码">
 				</div>
 				<div class="login-list" style="margin-top: -1px;">
+					<span class="input-icon"><i class="icon-lock"></i></span>
+					<input class="input-box password" type="text" placeholder="重复密码">
+				</div>
+				<div class="login-list" style="margin-top: -1px;">
 					<span class="input-icon"><i class="icon-repeat"></i></span>
 					<input class="input-box authcode" type="text" placeholder="验证码">
 				</div>
 				<div class="login-list">
-					<span class="login-btn">登录</span>
+					<span class="login-btn">注册</span>
 				</div>
 			</div>
 			<div class="sign-with-otherway">

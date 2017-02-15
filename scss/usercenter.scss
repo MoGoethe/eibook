@@ -1,0 +1,98 @@
+@import 'base';
+
+.usercenter{
+	.left-block{
+		width: 65%;
+		float:left;
+	}
+	.right-block{
+		width: 30%;
+		float:right;
+	}
+	width: 100%;
+	height: auto;
+	&.mt30{
+		margin-top: 30px;
+	}
+	&.mt40{
+		margin-top: 40px;
+	}
+	&:after{
+		@include floatFun();
+	}
+	.user-info{
+		position: relative;
+		padding-bottom:30px;
+		&:after{
+			@include floatFun();
+		}
+		.photo{
+			width: 80px;
+			height: 80px;
+			float:left;
+			overflow: hidden;
+			border-radius: 100%;
+			img{
+				width: 80px;
+				height: 80px;
+				display: block;
+			}
+		}
+		.info-text{
+			position: absolute;
+			width: 100%;
+			top: 0;
+			left:0;
+			height: 80px;
+			padding-left: 100px;
+			box-sizing:border-box;
+			.name{
+				font-size: 21px;
+				color: #333;
+				line-height: 40px;
+				height: 40px;
+			}
+			.my-info{
+				height: 40px;
+				&:after{
+					@include floatFun();
+				}
+				a{
+					display: block;
+					float:left;
+					height: 40px;
+					line-height: 20px;
+					font-size: 13px;
+					color: #666;
+					text-align: center;
+					padding:0 12px;
+					border-right:1px solid #e1e1e1;
+					max-width: 74px;
+					overflow: hidden;
+					&:hover{
+						color: #333;
+						span{
+							color: #333;
+						}
+					}
+					&:first-child{
+						padding-left:0;
+					}
+					&:last-child{
+						border-right:0;
+					}
+					span{
+						color: #777;
+						display: block;
+						width: 100%;
+						height: 20px;
+						line-height: 20px;
+					}
+				}
+			}
+		}
+	}
+	.user-detail-info{
+
+	}
+}
