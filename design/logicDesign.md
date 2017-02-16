@@ -16,7 +16,7 @@
 *<font style="color: red">操作全部使用异步请求完成</font>*
 
 
-##路由设置
+##基础路由设置
 *<font style="color: red">注释：√为已完成页面，×为未完成页面</font>*
 
 ####登陆注册首页
@@ -28,12 +28,10 @@
 * /user/:id		用户主页（商品列表(默认)，动态，最新评论）（×）
 * /user/:id/timeline	动态（×）
 * /user/:id/comments	最新评论（×）
-
-####自己相关
-* /mine/:id/following	关注列表（√）
-* /mine/:id/follower	粉丝列表（√）
-* /mine/:id/likes	喜欢的书籍（×）
-* /mine/:id/classical	关注分类（×）
+* /user/:id/following	关注列表（√）
+* /user/:id/follower	粉丝列表（√）
+* /user/:id/likes		喜欢的书籍（×）
+* /user/:id/classical	关注分类（×）
 
 ####书籍分类
 * /c/name		书籍分类列表（默认提供N个分类，可以自定义分类??）（×）
@@ -61,3 +59,6 @@
 * /find/random			随机查看（×）
 
 
+##请求路由设置
+
+* /api/login（post）

@@ -1,7 +1,7 @@
 var express = require('express');
 
 var router = express.Router();
-router.get('/id', function(req, res, next) {
+router.get('/book/:id', function(req, res, next) {
 	res.send('respond with a resource of book witch id is eql ID');
 });
 

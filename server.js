@@ -3,6 +3,13 @@ var app = express();
 
 //接入目录地址
 var pathname = __dirname;
+
+//静态资源访问
+app.use("/css",express.static(__dirname+'/css'));
+app.use("/js",express.static(__dirname+'/js'));
+app.use("/img",express.static(__dirname+'/img'));
+app.use("/lib",express.static(__dirname+'/lib'));
+
 //接入路由
 var routerIndex = require('./routes');
 var routerBook = require('./routes/book');
@@ -12,17 +19,11 @@ var routerSearch = require('./routes/search');
 var routerUser = require('./routes/user');
 
 app.use('/', routerIndex);
-app.use('/book', routerBook);
-app.use('/login', routerLogin);
-app.use('/register', routerRegister);
-app.use('/search', routerSearch);
-app.use('/user', routerUser);
-
-//静态资源访问
-app.use("/css",express.static(__dirname+'/css'));
-app.use("/js",express.static(__dirname+'/js'));
-app.use("/img",express.static(__dirname+'/img'));
-app.use("/lib",express.static(__dirname+'/lib'));
+app.use('/', routerBook);
+app.use('/', routerLogin);
+app.use('/', routerRegister);
+app.use('/', routerSearch);
+app.use('/', routerUser);
 
 
 var server = app.listen(3000, function () {

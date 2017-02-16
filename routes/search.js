@@ -1,7 +1,7 @@
 var express = require('express');
 
 var router = express.Router();
-router.get('/keyword', function(req, res, next) {
+router.get('/search/keyword', function(req, res, next) {
 	res.send('user page');
 });
 
