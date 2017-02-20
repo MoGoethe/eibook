@@ -1,8 +1,13 @@
-var express = require('express');
-var app = express();
+'use strict'
 
-//接入目录地址
-var pathname = __dirname;
+const express = require('express');
+const consolidate= require('consolidate');
+
+const app = express();
+
+app.engine("html",consolidate.ejs);
+app.set("view engine","html");
+app.set("views",__dirname+"/views");
 
 //静态资源访问
 app.use("/css",express.static(__dirname+'/css'));
@@ -26,6 +31,7 @@ app.use('/', routerSearch);
 app.use('/', routerUser);
 
 
-var server = app.listen(3000, function () {
-	console.log('server listening at http://127.0.0.1:3000');
+
+const server = app.listen(3001, function () {
+	console.log('server listening at http://127.0.0.1:3001');
 });
