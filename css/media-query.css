@@ -28,7 +28,15 @@
     .notifications .left-block .notifications-list {
       width: 200px; }
   .notifications .right-block {
-    width: 506px; } }
+    width: 506px; }
+  .usercenter .user-info .action-tool {
+    width: 118px;
+    padding: 0;
+    height: 80px; }
+    .usercenter .user-info .action-tool .action-btn {
+      float: none; }
+      .usercenter .user-info .action-tool .action-btn.add-following {
+        margin-top: 11px; } }
 
 @media screen and (max-width: 1080px) {
   .header .header-main .header-center .menu-list {

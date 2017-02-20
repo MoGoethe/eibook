@@ -1,0 +1,141 @@
+.common-tab-content .tab-title {
+  height: 51px;
+  border-bottom: 1px solid #ccc; }
+  .common-tab-content .tab-title a {
+    display: block;
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #555;
+    position: relative;
+    padding: 13px 17px; }
+    .common-tab-content .tab-title a:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      transition: width 0.35s;
+      -moz-transition: width 0.35s;
+      -webkit-transition: width 0.35s;
+      -o-transition: width 0.35s;
+      background-color: #444; }
+    .common-tab-content .tab-title a.active:after, .common-tab-content .tab-title a:hover:after {
+      width: 100%; }
+    .common-tab-content .tab-title a i {
+      margin-right: 5px; }
+    .common-tab-content .tab-title a span {
+      margin-left: 5px;
+      font-style: normal; }
+
+.common-tab-content .tab-content {
+  height: auto;
+  width: 100%; }
+  .common-tab-content .tab-content .content-box {
+    display: none; }
+  .common-tab-content .tab-content .follower-list,
+  .common-tab-content .tab-content .follow-list {
+    width: 100%; }
+    .common-tab-content .tab-content .follower-list .follow-list-item,
+    .common-tab-content .tab-content .follow-list .follow-list-item {
+      padding: 30px 0;
+      height: 50px;
+      position: relative;
+      border-bottom: 1px solid #eee; }
+      .common-tab-content .tab-content .follower-list .follow-list-item .photo,
+      .common-tab-content .tab-content .follow-list .follow-list-item .photo {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        overflow: hidden;
+        float: left; }
+        .common-tab-content .tab-content .follower-list .follow-list-item .photo img,
+        .common-tab-content .tab-content .follow-list .follow-list-item .photo img {
+          width: 50px;
+          height: 50px;
+          display: block; }
+      .common-tab-content .tab-content .follower-list .follow-list-item .info,
+      .common-tab-content .tab-content .follow-list .follow-list-item .info {
+        position: absolute;
+        width: 100%;
+        box-sizing: border-box;
+        z-index: -1;
+        top: 20px;
+        left: 0;
+        height: auto;
+        padding: 0 120px 0 70px; }
+        .common-tab-content .tab-content .follower-list .follow-list-item .info:after,
+        .common-tab-content .tab-content .follow-list .follow-list-item .info:after {
+          content: '.';
+          display: block;
+          visibility: hidden;
+          clear: both;
+          width: 100%;
+          height: 0;
+          font-size: 0;
+          zoom: 1; }
+        .common-tab-content .tab-content .follower-list .follow-list-item .info .name,
+        .common-tab-content .tab-content .follow-list .follow-list-item .info .name {
+          font-size: 21px;
+          color: #333;
+          line-height: 30px;
+          height: 30px; }
+        .common-tab-content .tab-content .follower-list .follow-list-item .info .info-text,
+        .common-tab-content .tab-content .follow-list .follow-list-item .info .info-text {
+          display: block;
+          font-size: 12px;
+          line-height: 18px;
+          color: #666; }
+          .common-tab-content .tab-content .follower-list .follow-list-item .info .info-text span,
+          .common-tab-content .tab-content .follow-list .follow-list-item .info .info-text span {
+            font-size: 12px;
+            color: #666;
+            padding: 0 12px;
+            border-right: 1px solid #e1e1e1; }
+            .common-tab-content .tab-content .follower-list .follow-list-item .info .info-text span:first-child,
+            .common-tab-content .tab-content .follow-list .follow-list-item .info .info-text span:first-child {
+              padding-left: 0; }
+            .common-tab-content .tab-content .follower-list .follow-list-item .info .info-text span:last-child,
+            .common-tab-content .tab-content .follow-list .follow-list-item .info .info-text span:last-child {
+              border-right: 0; }
+      .common-tab-content .tab-content .follower-list .follow-list-item .action,
+      .common-tab-content .tab-content .follow-list .follow-list-item .action {
+        float: right;
+        width: 100px;
+        height: 50px;
+        font-size: 0; }
+        .common-tab-content .tab-content .follower-list .follow-list-item .action .do,
+        .common-tab-content .tab-content .follow-list .follow-list-item .action .do {
+          display: block;
+          margin-top: 5px;
+          height: 38px;
+          border: 1px solid #ddd;
+          color: #666;
+          font-size: 16px;
+          border-radius: 20px;
+          width: 100px;
+          text-align: center;
+          line-height: 38px;
+          cursor: pointer;
+          transition: background-color 0.25s;
+          -moz-transition: background-color 0.25s;
+          -webkit-transition: background-color 0.25s;
+          -o-transition: background-color 0.25s; }
+          .common-tab-content .tab-content .follower-list .follow-list-item .action .do:hover,
+          .common-tab-content .tab-content .follow-list .follow-list-item .action .do:hover {
+            background-color: #f9f9f9;
+            color: #444; }
+          .common-tab-content .tab-content .follower-list .follow-list-item .action .do.follow-btn,
+          .common-tab-content .tab-content .follow-list .follow-list-item .action .do.follow-btn {
+            border-color: #12c48b;
+            background-color: #12c48b;
+            color: #fff; }
+            .common-tab-content .tab-content .follower-list .follow-list-item .action .do.follow-btn:hover,
+            .common-tab-content .tab-content .follow-list .follow-list-item .action .do.follow-btn:hover {
+              border-color: #0cb17c;
+              background-color: #0cb17c;
+              color: #fff; }

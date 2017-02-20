@@ -22,6 +22,11 @@
 	&:after{
 		@include floatFun();
 	}
+	.symbol{
+		width: 100%;
+		display: block;
+		margin-top: 30px;
+	}
 }
 .swiper-container{
 	position:relative;
@@ -122,6 +127,7 @@
 	}
 }
 .main-book-list{
+	margin-top:10px;
  	&:after{
 		@include floatFun();
 	} 

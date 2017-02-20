@@ -7,7 +7,7 @@ name:
 	查询
 对分支进行解析，获取数据，传递数据。 ejs负责渲染
 */	
-	console.log('now,i should find book type eql name 'name);
+	console.log('now,i should find book type eql name ',name);
 	next();
 })
 

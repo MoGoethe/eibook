@@ -25,16 +25,18 @@
 * /register		注册（√）
 
 ####其他用户相关
-* /user/:id		用户主页（商品列表(默认)，动态，最新评论）（×）
-* /user/:id/timeline	动态（×）
-* /user/:id/comments	最新评论（×）
+* /user/:id | /user/:id/center		用户中心（默认为书籍页）（×）
+* /user/:id/timeline	动态（√）
+* /user/:id/center	书籍（√）
+* /user/:id/comments	最新评论（√）
 * /user/:id/following	关注列表（√）
 * /user/:id/follower	粉丝列表（√）
-* /user/:id/likes		喜欢的书籍（×）
-* /user/:id/classical	关注分类（×）
+* /user/:id/hot		热门列表（√）
+* /user/:id/likes		喜欢的书籍（√）
+* /user/:id/classify	关注分类（√）
 
 ####书籍分类
-* /c/name		书籍分类列表（默认提供N个分类，可以自定义分类??）（×）
+* /classify/name	书籍分类列表（默认提供N个分类，可以自定义分类??）（×）
 
 ####具体书籍详情
 * /book/:id		具体商品（×）
@@ -46,17 +48,24 @@
 * /notifications/comments	评论提醒（√）
 * /notifications/chats		交谈对话（√）
 * /notifications/requests		请求（？是否需要）（×）
-* /notifications/likes		喜欢提醒（√）
+* /notifications/likes		点赞提醒（√）
 * /notifications/follow		关注提醒（√）
 * /notifications/other		其他消息提醒（×）
 
 
 ####通用页面
-* /discover/new			最新上架（×）
-* /discover/weekly			一周最火（×）
-* /discover/recommend		每日推荐（×）
-* /discover/history			历史最火（×）
-* /discover/random			随机查看（×）
+* /discover/new			最新上架（√）
+* /discover/weekly			一周最火（√）
+* /discover/recommend		每日推荐（√）
+* /discover/history			历史最火（√）
+* /discover/random			随机查看（√）
+
+####其他辅助页面
+* 忘记密码/找回密码
+* 404重定向页面
+* 商品上架页面
+* 
+
 
 
 ##请求路由设置

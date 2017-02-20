@@ -47,6 +47,17 @@
 			width: 506px;
 		}
 	}
+	.usercenter .user-info .action-tool{
+		width: 118px;
+		padding: 0;
+		height: 80px;
+		.action-btn{
+			float: none;
+			&.add-following{
+				margin-top: 11px;
+			}
+		}
+	}
 }
 @media screen and (max-width: 1080px) {
 	.header .header-main .header-center{
