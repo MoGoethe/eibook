@@ -52,11 +52,11 @@
 
 
 ####通用页面
-* /find/new			最新上架（×）
-* /find/weekly			一周最火（×）
-* /find/recommend		每日推荐（×）
-* /find/history			历史最火（×）
-* /find/random			随机查看（×）
+* /discover/new			最新上架（×）
+* /discover/weekly			一周最火（×）
+* /discover/recommend		每日推荐（×）
+* /discover/history			历史最火（×）
+* /discover/random			随机查看（×）
 
 
 ##请求路由设置
