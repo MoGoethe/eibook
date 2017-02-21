@@ -3,7 +3,7 @@
 const express = require('express');
 const consolidate= require('consolidate');
 
-//创建哎服务
+//创建服务
 const app = express();
 
 //模板引擎设置
