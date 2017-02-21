@@ -332,3 +332,29 @@ body {
         line-height: 20px;
         color: #999;
         font-size: 12px; }
+
+.common-sale {
+  width: 76px;
+  height: 24px;
+  display: inline-block;
+  background: transparent url(../img/site/border-blue.png) no-repeat center;
+  text-align: center;
+  line-height: 24px;
+  vertical-align: baseline;
+  color: #0397dd;
+  font-size: 14px;
+  margin: 0 5px;
+  cursor: default; }
+
+.common-exchange {
+  width: 76px;
+  height: 24px;
+  display: inline-block;
+  background: transparent url(../img/site/border-orange.png) no-repeat center;
+  text-align: center;
+  line-height: 24px;
+  vertical-align: baseline;
+  color: #ff9933;
+  font-size: 14px;
+  margin: 0 5px;
+  cursor: default; }

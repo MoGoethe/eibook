@@ -225,4 +225,377 @@
 			}
 		}
 	}
+	.list-main{
+		.list-item{
+			border-bottom:1px solid #eee;
+			padding:20px 0;
+			.author{
+				padding-bottom:10px;
+				&:after{
+					@include floatFun();
+				}
+				.author-photo{
+					width: 32px;
+					height: 32px;
+					display: block;
+					margin-right:10px;
+					float:left;
+					border-radius:100%;
+					overflow:hidden;
+					img{
+						display: block;
+						width: 32px;
+						height: 32px;
+					}
+				}
+				.author-info{
+					line-height: 32px;
+					width: auto;
+					height: 32px;
+					float:left;
+					p{
+						font-size: 12px;
+						color: #666;
+						.black{
+							color: #333;
+							font-size: 14px;
+							margin-right: 5px;
+						}
+					}
+				}
+			}
+			.comments{
+				padding-bottom:10px;
+				.text{
+					line-height: 24px;
+					color: #333;
+					font-size: 15px;
+				}
+			}
+			.personal{
+				position: relative;
+				&:after{
+					@include floatFun();
+				}
+				.personal-photo{
+					width: 50px;
+					height: 50px;
+					border-radius:100%;
+					overflow: hidden;
+					float:left;
+					img{
+						width: 50px;
+						height: 50px;
+						display: block;
+					}
+				}
+				.personal-info{
+					float:left;
+					margin-left:20px;
+					width: auto;
+					&:after{
+						@include floatFun();
+					}
+					.name a{
+						font-size: 15px;
+						color: #333;
+						font-weight:700;
+					}
+					.info-text{
+						display: block;
+						font-size: 12px;
+						line-height: 16px;
+						color: #666;
+						span{
+							font-size: 12px;
+							color: #666;
+							padding:0 12px;
+							border-right:1px solid #e1e1e1;
+							&:first-child{
+								padding-left:0;
+							}
+							&:last-child{
+								border-right:0;
+							}
+						}
+					}
+				}
+				.personal-action{
+					float:right;
+					width: 100px;
+					height: 50px;
+					font-size: 0;
+					.action-btn{
+						display: block;
+						margin-top: 5px;
+						height: 38px;
+						border:1px solid #ddd;
+						color: #666;
+						font-size:16px;
+						border-radius:20px;
+						width: 98px;
+						text-align: center;
+						line-height: 38px;
+						cursor: pointer;
+						@include transite(background-color,.25s);
+						&:hover{
+							background-color:#f9f9f9;
+							color: #444;
+						}
+						&.follow-btn{
+							border-color:$mainColor;
+							background-color:$mainColor;
+							color: #fff;
+							&:hover{
+								border-color:$darkColor;
+								background-color:$darkColor;
+								color: #fff;
+							}
+						}
+					}
+				}
+			}
+			.book{
+				padding-bottom:10px;
+				&.quote{
+					border-left:4px solid #999;
+					padding:15px 0 15px 10px;
+					background-color:#f9f9f9;
+					.action{
+						padding:10px 0 0 10px;
+					}
+				}
+				&:after{
+					@include floatFun();
+				}
+				.book-img{
+					height: 80px;
+					width: 80px;
+					float:left;
+					img{
+						display: block;
+						height: 80px;
+						width: auto;
+					}
+				}
+				.book-info{
+					width: 100%;
+					box-sizing:border-box;
+					padding-left:100px;
+					h4{
+						font-size: 15px;
+						color: #666;
+						a{
+							color: #333;
+							&:hover{
+								text-decoration: underline;
+							}
+						}
+					}
+					.book-author{
+						font-size: 14px;
+						color: #333;
+						padding: 5px 0;
+					}
+					.profile{
+						font-size: 14px;
+						color: #666;
+						line-height: 22px;
+					}
+				}
+			}
+			.action{
+				padding: 0;
+				font-size: 12px;
+				span,
+				a{
+					color: #999;
+					font-size: 12px;
+					margin-right: 10px;
+					&.name{
+						color: $mainColorBlue;
+						margin-right: 10px;
+						&:hover{
+							text-decoration: underline;
+							color: $mainColorBlue;
+						}
+					}
+					@include transite(color,.25s);
+					i{
+						margin-right: 2px;
+					}
+					&:hover{
+						color: #333;
+					}
+				}
+				span:hover{
+					color: #999;
+				}
+			}
+			.personal-author{
+				box-sizing:border-box;
+				border-radius:5px;
+				border:1px solid #ccc;
+				background-color:#f9f9f9;
+				padding:10px 15px;
+				.personal-author-info{
+					padding-bottom:10px;
+					&.alone{
+						padding-bottom:0;
+					}
+					&:after{
+						@include floatFun();
+					}
+					.photo{
+						width: 48px;
+						height: 48px;
+						border-radius:100%;
+						float: left;
+						overflow: hidden;
+						img{
+							display: block;
+							width: 48px;
+							height: 48px;
+						}
+					}
+					.info-text{
+						width:auto;
+						float:left;
+						margin-left: 20px;
+						.name{
+							font-size: 16px;
+							line-height: 24px;
+							color: #333;
+						}
+						.info{
+							font-size: 13px;
+							color: #999;
+							line-height: 24px;
+						}
+					}
+					.action{
+						float:right;
+						width: 100px;
+						height: 50px;
+						font-size: 0;
+						.action-btn{
+							display: block;
+							margin-top: 5px;
+							height: 38px;
+							border:1px solid #ddd;
+							color: #666;
+							font-size:16px;
+							border-radius:20px;
+							width: 98px;
+							text-align: center;
+							line-height: 38px;
+							cursor: pointer;
+							@include transite(background-color,.25s);
+							&:hover{
+								background-color:#f9f9f9;
+								color: #444;
+							}
+							&.follow-btn{
+								border-color:$mainColor;
+								background-color:$mainColor;
+								color: #fff;
+								&:hover{
+									border-color:$darkColor;
+									background-color:$darkColor;
+									color: #fff;
+								}
+							}
+						}
+					}
+				}
+				.personal-author-profile{
+					padding-top:10px;
+					border-top:1px solid #ccc;
+					.text{
+						font-size: 13px;
+						color: #999;
+						line-height: 22px;
+					}
+				}
+			}
+			.subject{
+				&.quote{
+					box-sizing:border-box;
+					border-radius:5px;
+					border:1px solid #ccc;
+					background-color:#f9f9f9;
+					padding:10px 15px;
+				}
+				&:after{
+					@include floatFun();
+				}
+				.subject-photo{
+					width: 48px;
+					height: 48px;
+					border-radius:7px;
+					float: left;
+					overflow: hidden;
+					border:1px solid #ddd;
+					img{
+						display: block;
+						width: 48px;
+						height: 48px;
+					}
+				}
+				.subject-info{
+					width:auto;
+					float:left;
+					margin-left: 20px;
+					.name{
+						font-size: 16px;
+						line-height: 24px;
+						color: #333;
+					}
+					.info{
+						font-size: 13px;
+						color: #999;
+						line-height: 24px;
+						a{
+							color: $mainColorBlue;
+						}
+					}
+				}
+				.action{
+					float:right;
+					width: 100px;
+					height: 50px;
+					font-size: 0;
+					.action-btn{
+						display: block;
+						margin-top: 5px;
+						height: 38px;
+						border:1px solid #ddd;
+						color: #666;
+						font-size:16px;
+						border-radius:20px;
+						width: 98px;
+						text-align: center;
+						line-height: 38px;
+						cursor: pointer;
+						@include transite(background-color,.25s);
+						&:hover{
+							background-color:#f9f9f9;
+							color: #444;
+						}
+						&.follow-btn{
+							border-color:$mainColor;
+							background-color:$mainColor;
+							color: #fff;
+							&:hover{
+								border-color:$darkColor;
+								background-color:$darkColor;
+								color: #fff;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
 }

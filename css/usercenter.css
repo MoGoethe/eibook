@@ -209,3 +209,355 @@
         -webkit-transition: color 0.25s;
         -o-transition: color 0.25s;
         color: #222; }
+  .usercenter .list-main .list-item {
+    border-bottom: 1px solid #eee;
+    padding: 20px 0; }
+    .usercenter .list-main .list-item .author {
+      padding-bottom: 10px; }
+      .usercenter .list-main .list-item .author:after {
+        content: '.';
+        display: block;
+        visibility: hidden;
+        clear: both;
+        width: 100%;
+        height: 0;
+        font-size: 0;
+        zoom: 1; }
+      .usercenter .list-main .list-item .author .author-photo {
+        width: 32px;
+        height: 32px;
+        display: block;
+        margin-right: 10px;
+        float: left;
+        border-radius: 100%;
+        overflow: hidden; }
+        .usercenter .list-main .list-item .author .author-photo img {
+          display: block;
+          width: 32px;
+          height: 32px; }
+      .usercenter .list-main .list-item .author .author-info {
+        line-height: 32px;
+        width: auto;
+        height: 32px;
+        float: left; }
+        .usercenter .list-main .list-item .author .author-info p {
+          font-size: 12px;
+          color: #666; }
+          .usercenter .list-main .list-item .author .author-info p .black {
+            color: #333;
+            font-size: 14px;
+            margin-right: 5px; }
+    .usercenter .list-main .list-item .comments {
+      padding-bottom: 10px; }
+      .usercenter .list-main .list-item .comments .text {
+        line-height: 24px;
+        color: #333;
+        font-size: 15px; }
+    .usercenter .list-main .list-item .personal {
+      position: relative; }
+      .usercenter .list-main .list-item .personal:after {
+        content: '.';
+        display: block;
+        visibility: hidden;
+        clear: both;
+        width: 100%;
+        height: 0;
+        font-size: 0;
+        zoom: 1; }
+      .usercenter .list-main .list-item .personal .personal-photo {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        overflow: hidden;
+        float: left; }
+        .usercenter .list-main .list-item .personal .personal-photo img {
+          width: 50px;
+          height: 50px;
+          display: block; }
+      .usercenter .list-main .list-item .personal .personal-info {
+        float: left;
+        margin-left: 20px;
+        width: auto; }
+        .usercenter .list-main .list-item .personal .personal-info:after {
+          content: '.';
+          display: block;
+          visibility: hidden;
+          clear: both;
+          width: 100%;
+          height: 0;
+          font-size: 0;
+          zoom: 1; }
+        .usercenter .list-main .list-item .personal .personal-info .name a {
+          font-size: 15px;
+          color: #333;
+          font-weight: 700; }
+        .usercenter .list-main .list-item .personal .personal-info .info-text {
+          display: block;
+          font-size: 12px;
+          line-height: 16px;
+          color: #666; }
+          .usercenter .list-main .list-item .personal .personal-info .info-text span {
+            font-size: 12px;
+            color: #666;
+            padding: 0 12px;
+            border-right: 1px solid #e1e1e1; }
+            .usercenter .list-main .list-item .personal .personal-info .info-text span:first-child {
+              padding-left: 0; }
+            .usercenter .list-main .list-item .personal .personal-info .info-text span:last-child {
+              border-right: 0; }
+      .usercenter .list-main .list-item .personal .personal-action {
+        float: right;
+        width: 100px;
+        height: 50px;
+        font-size: 0; }
+        .usercenter .list-main .list-item .personal .personal-action .action-btn {
+          display: block;
+          margin-top: 5px;
+          height: 38px;
+          border: 1px solid #ddd;
+          color: #666;
+          font-size: 16px;
+          border-radius: 20px;
+          width: 98px;
+          text-align: center;
+          line-height: 38px;
+          cursor: pointer;
+          transition: background-color 0.25s;
+          -moz-transition: background-color 0.25s;
+          -webkit-transition: background-color 0.25s;
+          -o-transition: background-color 0.25s; }
+          .usercenter .list-main .list-item .personal .personal-action .action-btn:hover {
+            background-color: #f9f9f9;
+            color: #444; }
+          .usercenter .list-main .list-item .personal .personal-action .action-btn.follow-btn {
+            border-color: #12c48b;
+            background-color: #12c48b;
+            color: #fff; }
+            .usercenter .list-main .list-item .personal .personal-action .action-btn.follow-btn:hover {
+              border-color: #0cb17c;
+              background-color: #0cb17c;
+              color: #fff; }
+    .usercenter .list-main .list-item .book {
+      padding-bottom: 10px; }
+      .usercenter .list-main .list-item .book.quote {
+        border-left: 4px solid #999;
+        padding: 15px 0 15px 10px;
+        background-color: #f9f9f9; }
+        .usercenter .list-main .list-item .book.quote .action {
+          padding: 10px 0 0 10px; }
+      .usercenter .list-main .list-item .book:after {
+        content: '.';
+        display: block;
+        visibility: hidden;
+        clear: both;
+        width: 100%;
+        height: 0;
+        font-size: 0;
+        zoom: 1; }
+      .usercenter .list-main .list-item .book .book-img {
+        height: 80px;
+        width: 80px;
+        float: left; }
+        .usercenter .list-main .list-item .book .book-img img {
+          display: block;
+          height: 80px;
+          width: auto; }
+      .usercenter .list-main .list-item .book .book-info {
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 100px; }
+        .usercenter .list-main .list-item .book .book-info h4 {
+          font-size: 15px;
+          color: #666; }
+          .usercenter .list-main .list-item .book .book-info h4 a {
+            color: #333; }
+            .usercenter .list-main .list-item .book .book-info h4 a:hover {
+              text-decoration: underline; }
+        .usercenter .list-main .list-item .book .book-info .book-author {
+          font-size: 14px;
+          color: #333;
+          padding: 5px 0; }
+        .usercenter .list-main .list-item .book .book-info .profile {
+          font-size: 14px;
+          color: #666;
+          line-height: 22px; }
+    .usercenter .list-main .list-item .action {
+      padding: 0;
+      font-size: 12px; }
+      .usercenter .list-main .list-item .action span,
+      .usercenter .list-main .list-item .action a {
+        color: #999;
+        font-size: 12px;
+        margin-right: 10px;
+        transition: color 0.25s;
+        -moz-transition: color 0.25s;
+        -webkit-transition: color 0.25s;
+        -o-transition: color 0.25s; }
+        .usercenter .list-main .list-item .action span.name,
+        .usercenter .list-main .list-item .action a.name {
+          color: #43a5ec;
+          margin-right: 10px; }
+          .usercenter .list-main .list-item .action span.name:hover,
+          .usercenter .list-main .list-item .action a.name:hover {
+            text-decoration: underline;
+            color: #43a5ec; }
+        .usercenter .list-main .list-item .action span i,
+        .usercenter .list-main .list-item .action a i {
+          margin-right: 2px; }
+        .usercenter .list-main .list-item .action span:hover,
+        .usercenter .list-main .list-item .action a:hover {
+          color: #333; }
+      .usercenter .list-main .list-item .action span:hover {
+        color: #999; }
+    .usercenter .list-main .list-item .personal-author {
+      box-sizing: border-box;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+      padding: 10px 15px; }
+      .usercenter .list-main .list-item .personal-author .personal-author-info {
+        padding-bottom: 10px; }
+        .usercenter .list-main .list-item .personal-author .personal-author-info.alone {
+          padding-bottom: 0; }
+        .usercenter .list-main .list-item .personal-author .personal-author-info:after {
+          content: '.';
+          display: block;
+          visibility: hidden;
+          clear: both;
+          width: 100%;
+          height: 0;
+          font-size: 0;
+          zoom: 1; }
+        .usercenter .list-main .list-item .personal-author .personal-author-info .photo {
+          width: 48px;
+          height: 48px;
+          border-radius: 100%;
+          float: left;
+          overflow: hidden; }
+          .usercenter .list-main .list-item .personal-author .personal-author-info .photo img {
+            display: block;
+            width: 48px;
+            height: 48px; }
+        .usercenter .list-main .list-item .personal-author .personal-author-info .info-text {
+          width: auto;
+          float: left;
+          margin-left: 20px; }
+          .usercenter .list-main .list-item .personal-author .personal-author-info .info-text .name {
+            font-size: 16px;
+            line-height: 24px;
+            color: #333; }
+          .usercenter .list-main .list-item .personal-author .personal-author-info .info-text .info {
+            font-size: 13px;
+            color: #999;
+            line-height: 24px; }
+        .usercenter .list-main .list-item .personal-author .personal-author-info .action {
+          float: right;
+          width: 100px;
+          height: 50px;
+          font-size: 0; }
+          .usercenter .list-main .list-item .personal-author .personal-author-info .action .action-btn {
+            display: block;
+            margin-top: 5px;
+            height: 38px;
+            border: 1px solid #ddd;
+            color: #666;
+            font-size: 16px;
+            border-radius: 20px;
+            width: 98px;
+            text-align: center;
+            line-height: 38px;
+            cursor: pointer;
+            transition: background-color 0.25s;
+            -moz-transition: background-color 0.25s;
+            -webkit-transition: background-color 0.25s;
+            -o-transition: background-color 0.25s; }
+            .usercenter .list-main .list-item .personal-author .personal-author-info .action .action-btn:hover {
+              background-color: #f9f9f9;
+              color: #444; }
+            .usercenter .list-main .list-item .personal-author .personal-author-info .action .action-btn.follow-btn {
+              border-color: #12c48b;
+              background-color: #12c48b;
+              color: #fff; }
+              .usercenter .list-main .list-item .personal-author .personal-author-info .action .action-btn.follow-btn:hover {
+                border-color: #0cb17c;
+                background-color: #0cb17c;
+                color: #fff; }
+      .usercenter .list-main .list-item .personal-author .personal-author-profile {
+        padding-top: 10px;
+        border-top: 1px solid #ccc; }
+        .usercenter .list-main .list-item .personal-author .personal-author-profile .text {
+          font-size: 13px;
+          color: #999;
+          line-height: 22px; }
+    .usercenter .list-main .list-item .subject.quote {
+      box-sizing: border-box;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+      padding: 10px 15px; }
+    .usercenter .list-main .list-item .subject:after {
+      content: '.';
+      display: block;
+      visibility: hidden;
+      clear: both;
+      width: 100%;
+      height: 0;
+      font-size: 0;
+      zoom: 1; }
+    .usercenter .list-main .list-item .subject .subject-photo {
+      width: 48px;
+      height: 48px;
+      border-radius: 7px;
+      float: left;
+      overflow: hidden;
+      border: 1px solid #ddd; }
+      .usercenter .list-main .list-item .subject .subject-photo img {
+        display: block;
+        width: 48px;
+        height: 48px; }
+    .usercenter .list-main .list-item .subject .subject-info {
+      width: auto;
+      float: left;
+      margin-left: 20px; }
+      .usercenter .list-main .list-item .subject .subject-info .name {
+        font-size: 16px;
+        line-height: 24px;
+        color: #333; }
+      .usercenter .list-main .list-item .subject .subject-info .info {
+        font-size: 13px;
+        color: #999;
+        line-height: 24px; }
+        .usercenter .list-main .list-item .subject .subject-info .info a {
+          color: #43a5ec; }
+    .usercenter .list-main .list-item .subject .action {
+      float: right;
+      width: 100px;
+      height: 50px;
+      font-size: 0; }
+      .usercenter .list-main .list-item .subject .action .action-btn {
+        display: block;
+        margin-top: 5px;
+        height: 38px;
+        border: 1px solid #ddd;
+        color: #666;
+        font-size: 16px;
+        border-radius: 20px;
+        width: 98px;
+        text-align: center;
+        line-height: 38px;
+        cursor: pointer;
+        transition: background-color 0.25s;
+        -moz-transition: background-color 0.25s;
+        -webkit-transition: background-color 0.25s;
+        -o-transition: background-color 0.25s; }
+        .usercenter .list-main .list-item .subject .action .action-btn:hover {
+          background-color: #f9f9f9;
+          color: #444; }
+        .usercenter .list-main .list-item .subject .action .action-btn.follow-btn {
+          border-color: #12c48b;
+          background-color: #12c48b;
+          color: #fff; }
+          .usercenter .list-main .list-item .subject .action .action-btn.follow-btn:hover {
+            border-color: #0cb17c;
+            background-color: #0cb17c;
+            color: #fff; }
