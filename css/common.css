@@ -70,16 +70,9 @@ body {
           line-height: 58px;
           float: left;
           cursor: pointer; }
-          .header .header-main .header-center .menu-list a.home {
+          .header .header-main .header-center .menu-list a.active span,
+          .header .header-main .header-center .menu-list a.active i {
             color: #12c48b; }
-            .header .header-main .header-center .menu-list a.home:hover {
-              background-color: #fff; }
-          .header .header-main .header-center .menu-list a:first-child {
-            margin-left: 0;
-            padding-left: 0; }
-            .header .header-main .header-center .menu-list a:first-child span,
-            .header .header-main .header-center .menu-list a:first-child i {
-              color: #12c48b; }
           .header .header-main .header-center .menu-list a:hover {
             background-color: #eee; }
           .header .header-main .header-center .menu-list a i {

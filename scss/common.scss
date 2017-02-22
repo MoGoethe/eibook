@@ -62,15 +62,7 @@ user-select:none;}
 					line-height: 58px;					
 					float:left;
 					cursor: pointer;
-					&.home{
-						color: $mainColor;
-						&:hover{
-							background-color:#fff;
-						}
-					}
-					&:first-child{
-						margin-left:0;
-						padding-left:0;
+					&.active{
 						span,
 						i{
 							color: $mainColor;

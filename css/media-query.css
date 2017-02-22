@@ -23,11 +23,11 @@
         line-height: 24px; }
         .main-book-list .book-item .book-main .book-profile p.owner-profile {
           height: 46px; }
-  .notifications .left-block {
+  .notifications .left-fixed-menu {
     width: 200px; }
-    .notifications .left-block .notifications-list {
+    .notifications .left-fixed-menu .notifications-list {
       width: 200px; }
-  .notifications .right-block {
+  .notifications .right-box-main {
     width: 506px; }
   .usercenter .user-info .action-tool {
     width: 118px;
