@@ -31,7 +31,7 @@ html, body {
     font-size: 48px; }
   .login .login-content {
     width: 300px;
-    height: 380px;
+    height: 422px;
     padding: 40px;
     z-index: 9;
     position: absolute;
@@ -40,11 +40,8 @@ html, body {
     border-radius: 7px;
     left: 50%;
     top: 50%;
-    margin-top: -290px;
+    margin-top: -320px;
     margin-left: -200px; }
-    .login .login-content.register {
-      height: 422px;
-      margin-top: -320px; }
     .login .login-content .login-main h2 {
       font-size: 22px;
       text-align: center;
@@ -114,6 +111,28 @@ html, body {
         transition: background-color .35s; }
         .login .login-content .login-main .login-list .login-btn:hover {
           background-color: #0cb17c; }
+      .login .login-content .login-main .login-list .action {
+        height: 30px;
+        line-height: 30px; }
+        .login .login-content .login-main .login-list .action .save {
+          font-size: 13px;
+          color: #666;
+          cursor: pointer;
+          margin-left: 5px; }
+          .login .login-content .login-main .login-list .action .save #saveme {
+            vertical-align: -15%;
+            margin: 0; }
+          .login .login-content .login-main .login-list .action .save:hover {
+            color: #333; }
+        .login .login-content .login-main .login-list .action .forget-password {
+          font-size: 13px;
+          color: #666;
+          text-align: right;
+          height: 20px;
+          float: right; }
+          .login .login-content .login-main .login-list .action .forget-password:hover {
+            color: #333;
+            text-decoration: underline; }
     .login .login-content .sign-with-otherway {
       margin-top: 20px; }
       .login .login-content .sign-with-otherway .splice {

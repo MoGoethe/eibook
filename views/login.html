@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>EIBOOK</title>
-	<link rel="shortcut icon" href="./img/site/favicon.ico" /> 
-	<link rel="stylesheet" href="./css/base.css">
-	<link rel="stylesheet" href="./css/common.min.css">
-	<link rel="stylesheet" href="./css/login-register.min.css">
-	<link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.min.css">
+	<title>Ei'BOOK</title>
+	<link rel="shortcut icon" href="/img/site/favicon.ico" /> 
+	<link rel="stylesheet" href="/css/base.css">
+	<link rel="stylesheet" href="/css/common.min.css">
+	<link rel="stylesheet" href="/css/login-register.min.css">
+	<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
 	<div class="login-bg"></div>
@@ -15,18 +15,27 @@
 		<span class="login-logo">EI'BOOK</span>
 		<div class="login-content">
 			<div class="login-main">
-				<h2><span>登录</span>·<a href="./register.html">注册</a></h2>
+				<h2><span>登录</span>·<a href="/register.html">注册</a></h2>
 				<div class="login-list">
 					<span class="input-icon"><i class="icon-user"></i></span>
-					<input class="input-box user" type="text" placeholder="用户名">
+					<input class="input-box user" type="text" placeholder="用户名" id="user">
 				</div>
 				<div class="login-list" style="margin-top: -1px;">
 					<span class="input-icon"><i class="icon-lock"></i></span>
-					<input class="input-box password" type="text" placeholder="密码">
+					<input class="input-box password" type="text" placeholder="密码" id="password">
 				</div>
 				<div class="login-list" style="margin-top: -1px;">
 					<span class="input-icon"><i class="icon-repeat"></i></span>
 					<input class="input-box authcode" type="text" placeholder="验证码">
+				</div>
+				<div class="login-list" style="height: 30px;">
+					<p class="action">
+						<span class="save">
+  							<input type="checkbox" name="sex" id="saveme" />
+  							<label for="saveme">记住我</label>
+  						</span>
+  						 <a href="#" class="forget-password">忘记密码？</a>
+  					</p>
 				</div>
 				<div class="login-list">
 					<span class="login-btn">登录</span>
@@ -44,25 +53,48 @@
 			</div>
 		</div>
 	</div>
-<script src="./lib/particle/dev/particleground.all.js"></script>
+<script src="/js/jquery.min.1.9.1.js"></script>
+<script src="/lib/particle/dev/particleground.all.js"></script>
+<script src="/lib/layer/layer.js"></script>
 <script>
-!(function(){
-	return new Particleground.wave( '.login-bg', {
-		num: 3,
-		lineColor: ['rgba(0, 190, 112, .5)', 'rgba(0, 190, 112, .7)', 'rgba(0, 190, 112, .9)'],
-		// 三条线依次的边框宽度
-		lineWidth: [ .5, .7, .9 ],
-		// 三条线依次的偏移值
-		offsetLeft: [ 2, 1, 0 ],
-		// 三条线都向下偏移容器高度的0.75倍, [ 0.75, 0.5, 0.3 ]
-		offsetTop: .85,
-		// 三条线依次的波峰高度
-		crestHeight: [ 8, 16, 24 ],
-		// 三条线都只有两个波峰(波纹)
-		rippleNum: 2,
-		speed: .01
-	});
-})()
+	!(function(){
+		return new Particleground.wave( '.login-bg', {
+			num: 3,
+			lineColor: ['rgba(0, 190, 112, .5)', 'rgba(0, 190, 112, .7)', 'rgba(0, 190, 112, .9)'],
+			// 三条线依次的边框宽度
+			lineWidth: [ .5, .7, .9 ],
+			// 三条线依次的偏移值
+			offsetLeft: [ 2, 1, 0 ],
+			// 三条线都向下偏移容器高度的0.75倍, [ 0.75, 0.5, 0.3 ]
+			offsetTop: .85,
+			// 三条线依次的波峰高度
+			crestHeight: [ 8, 16, 24 ],
+			// 三条线都只有两个波峰(波纹)
+			rippleNum: 2,
+			speed: .01
+		});
+	})()
+	$(document).on('click','.login-btn',function(){
+		var username = $("#user").val();
+		var password = $("#password").val();
+		$.ajax({
+			url:'/api/login',
+			type:'POST',
+			data:{username:username,password:password},
+			dataType:'json',
+			success:function(data){
+				if(data.status){
+					window.location.href="/"
+				}else{
+					layer.msg('登录失败');
+				}
+			},  
+			error:function(data){
+				console.log(data);
+				layer.msg('服务器错误');
+			}
+		})
+	})
 </script>
 </body>
 </html>
