@@ -25,7 +25,7 @@
 * /register		注册（√）
 
 ####其他用户相关
-* /user/:id | /user/:id/center		用户中心（默认为书籍页）（×）
+* /user/:id | /user/:id/center		用户中心（默认为书籍页）（√）
 * /user/:id/timeline	动态（√）
 * /user/:id/center	书籍（√）
 * /user/:id/comments	最新评论（√）
@@ -61,9 +61,9 @@
 * /discover/random			随机查看（√）
 
 ####其他辅助页面
-* 忘记密码/找回密码
-* 404重定向页面
-* 商品上架页面
+* 忘记密码/找回密码（×）
+* 404重定向页面（×）
+* 商品上架页面（×）
 * 
 
 
