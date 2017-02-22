@@ -14,14 +14,25 @@
 	<div class="header">
 		<div class="header-main">
 			<div class="logo">
-				<a href="#" class="logo-title">EI'BOOK</a>
+				<a href="#" class="logo-title">Ei'BOOK</a>
 			</div>
 			<div class="header-center">
-				<div class="menu-list">
-					<a href="#" class="home"><i class="icon-globe"></i><span>首页</span></a>
-					<a href="#"><i class="icon-leaf"></i><span>关注</span></a>
-					<a href="#"><i class="icon-bell"></i><span>消息</span></a>
-				</div>
+				<ul class="header-menu-list">
+					<li class="header-menu-list-item active"><a href="#"><i class="icon-globe"></i><span>首页</span></a></li>
+					<li class="header-menu-list-item"><a href="#"><i class="icon-leaf"></i><span>关注</span></a></li>
+					<li class="header-menu-list-item">
+						<a href="#"><i class="icon-bell"></i><span>消息</span></a>
+						<ul class="sec-header-menu">
+							<li class="sec-header-menu-item"><a href="javascript:;"><i class="icon-comments-alt"></i>评论</a></li>
+							<li class="sec-header-menu-item"><a href="javascript:;"><i class="icon-envelope-alt"></i>Ei'B 信</a></li>
+							<li class="sec-header-menu-item"><a href="javascript:;"><i class="icon-exchange"></i>换书请求</a></li>
+							<li class="sec-header-menu-item"><a href="javascript:;"><i class="icon-bookmark-empty"></i>关注和收藏</a></li>
+							<li class="sec-header-menu-item"><a href="javascript:;"><i class="icon-upload-alt"></i>旧书上架</a></li>
+							<li class="sec-header-menu-item"><a href="javascript:;"><i class="icon-heart-empty"></i>赞和喜欢</a></li>
+							<li class="sec-header-menu-item"><a href="javascript:;"><i class="icon-volume-up"></i>其他信息</a></li>
+						</ul>
+					</li>
+				</ul>
 				<div class="search-main">
 					<input type="text" placeholder="搜索">
 					<span class="search-btn"><i class="icon-search"></i></span>
@@ -41,33 +52,33 @@
 	<div class="main">
 		<div class="notifications">
 			<div class="left-fixed-menu">
-				<div class="notifications-list">
-					<div class="notifications-list-item" data-box-name="comment-box">
+				<ul class="notifications-list">
+					<li class="notifications-list-item active" data-box-name="comment-box">
 						<a href="javascript:;"><i class="icon-comments-alt"></i>评论</a>
-					</div>
-					<div class="notifications-list-item" data-box-name="message-box">
-						<a href="javascript:;"><i class="icon-envelope-alt"></i>EI'B 信</a>
-					</div>
-					<div class="notifications-list-item" data-box-name="request-box">
+					</li>
+					<li class="notifications-list-item" data-box-name="message-box">
+						<a href="javascript:;"><i class="icon-envelope-alt"></i>Ei'B 信</a>
+					</li>
+					<li class="notifications-list-item" data-box-name="request-box">
 						<a href="javascript:;"><i class="icon-exchange"></i>换书请求</a>
-					</div>
-					<div class="notifications-list-item active" data-box-name="follow-box">
+					</li>
+					<li class="notifications-list-item " data-box-name="follow-box">
 						<a href="javascript:;"><i class="icon-bookmark-empty"></i>关注和收藏</a>
-					</div>
-					<div class="notifications-list-item" data-box-name="shelve-box">
+					</li>
+					<li class="notifications-list-item" data-box-name="shelve-box">
 						<a href="javascript:;"><i class="icon-upload-alt"></i>旧书上架</a>
-					</div>
-					<div class="notifications-list-item" data-box-name="like-box">
+					</li>
+					<li class="notifications-list-item" data-box-name="like-box">
 						<a href="javascript:;"><i class="icon-heart-empty"></i>赞和喜欢</a>
-					</div>
-					<div class="notifications-list-item" data-box-name="other-box">
+					</li>
+					<li class="notifications-list-item" data-box-name="other-box">
 						<a href="javascript:;"><i class="icon-volume-up"></i>其他信息</a>
-					</div>
-				</div>
+					</li>
+				</ul>
 			</div>
 			<div class="right-box-main">
 				<div class="notifications-main-box">
-					<div class="notifications-main-box-item comment-box">
+					<div class="notifications-main-box-item block comment-box">
 						<h4 class="common-notifications-main-box-title">我的收到评论</h4>
 						<div class="box-main">
 							<div class="comment-item">
@@ -258,8 +269,10 @@
 							</div>
 						</div>
 					</div>
-					<div class="notifications-main-box-item request-box">换书请求</div>
-					<div class="notifications-main-box-item follow-box block">
+					<div class="notifications-main-box-item request-box">
+						<h4 class="common-notifications-main-box-title"><span class="title-text">换书请求</span></h4>
+					</div>
+					<div class="notifications-main-box-item follow-box">
 						<h4 class="common-notifications-main-box-title"><span class="title-text">关注提示</span></h4>
 						<div class="common-systemsg-list">
 							<div class="systemsg-list-item">
@@ -267,7 +280,7 @@
 									<a href="http://baidu.com"><img src="../img/user/photo.png" alt=""></a>
 								</div>
 								<div class="info">
-									<p class="text">用户<a href="#">seaseeyoul</a>关注了你。</p>
+									<p class="text">用户<a href="#">seaseeyoul</a>收藏了你的<a href="#">《每个人都是一座孤岛》</a></p>
 									<p class="time">2017.02.08</p>
 								</div>
 							</div>
@@ -285,7 +298,7 @@
 									<a href="http://baidu.com"><img src="../img/user/photo.png" alt=""></a>
 								</div>
 								<div class="info">
-									<p class="text">用户<a href="#">seaseeyoul</a>关注了你。</p>
+									<p class="text">用户<a href="#">seaseeyoul</a>收藏了你的<a href="#">《皮囊》</a></p>
 									<p class="time">2017.02.08</p>
 								</div>
 							</div>
@@ -402,7 +415,56 @@
 							</div>
 						</div>
 					</div>
-					<div class="notifications-main-box-item other-box">其他信息</div>
+					<div class="notifications-main-box-item other-box">
+						<h4 class="common-notifications-main-box-title"><span class="title-text">其它信息</span></h4>
+						<div class="common-systemsg-list">
+							<div class="systemsg-list-item">
+								<div class="photo">
+									<a href="http://baidu.com"><img src="../img/user/photo.png" alt=""></a>
+								</div>
+								<div class="info">
+									<p class="text">系统消息：您上架<a href="#">《雨季不再来》</a>审核失败，<a href="#">点击</a>查看原因。</p>
+									<p class="time">2017.02.08</p>
+								</div>
+							</div>
+							<div class="systemsg-list-item">
+								<div class="photo">
+									<a href="http://baidu.com"><img src="../img/user/photo.png" alt=""></a>
+								</div>
+								<div class="info">
+									<p class="text">系统消息：您上架<a href="#">《雨季不再来》</a>已上架。</p>
+									<p class="time">2017.02.08</p>
+								</div>
+							</div>
+							<div class="systemsg-list-item">
+								<div class="photo">
+									<a href="http://baidu.com"><img src="../img/user/photo.png" alt=""></a>
+								</div>
+								<div class="info">
+									<p class="text">系统消息：您上架<a href="#">《雨季不再来》</a>审核失败，<a href="#">点击</a>查看原因。</p>
+									<p class="time">2017.02.08</p>
+								</div>
+							</div>
+							<div class="systemsg-list-item">
+								<div class="photo">
+									<a href="http://baidu.com"><img src="../img/user/photo.png" alt=""></a>
+								</div>
+								<div class="info">
+									<p class="text">系统消息：您上架<a href="#">《雨季不再来》</a>已上架。</p>
+									<p class="time">2017.02.08</p>
+								</div>
+							</div>
+							<div class="systemsg-list-item">
+								<div class="photo">
+									<a href="http://baidu.com"><img src="../img/user/photo.png" alt=""></a>
+								</div>
+								<div class="info">
+									<p class="text">系统消息：您上架<a href="#">《雨季不再来》</a>已上架。</p>
+									<p class="time">2017.02.08</p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>		
 		</div>

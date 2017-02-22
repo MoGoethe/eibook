@@ -37,13 +37,13 @@
 		}
 	}
 	.notifications{
-		.left-block{
+		.left-fixed-menu{
 			width: 200px;
 			.notifications-list{
 				width: 200px;
 			}
 		}
-		.right-block{
+		.right-box-main{
 			width: 506px;
 		}
 	}
@@ -61,7 +61,7 @@
 }
 @media screen and (max-width: 1080px) {
 	.header .header-main .header-center{
-		.menu-list{
+		.header-menu-list{
 			margin-left: 70px;
 			a{
 				i{

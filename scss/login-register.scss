@@ -20,12 +20,8 @@ html,body{background-color: #e9e9e9;width: 100%;height: 100%;}
 		font-size: 48px;
 	}
 	.login-content{
-		&.register{
-			height: 422px;
-			margin-top: -320px;
-		}
 		width: 300px;
-		height: 380px;
+		height: 422px;
 		padding:40px;
 		z-index: 9;
 		position:absolute;
@@ -34,7 +30,7 @@ html,body{background-color: #e9e9e9;width: 100%;height: 100%;}
 		border-radius:7px;
 		left: 50%;
 		top: 50%;
-		margin-top: -290px;
+		margin-top: -320px;
 		margin-left: -200px;
 		.login-main{
 			h2{
@@ -120,6 +116,35 @@ html,body{background-color: #e9e9e9;width: 100%;height: 100%;}
 						background-color:$darkColor;
 					}
 				}
+				.action{
+					height: 30px;
+					line-height: 30px;
+					.save{
+						font-size: 13px;
+						color: #666;
+						cursor: pointer;
+						margin-left: 5px;
+						#saveme{
+							vertical-align: -15%;
+							margin:0;
+						}
+						&:hover{
+							color: #333;
+						}
+					}
+					.forget-password{
+						font-size: 13px;
+						color: #666;
+						text-align:right;
+						height: 20px;
+						float: right;
+						&:hover{
+							color: #333;
+							text-decoration: underline;
+						}
+					}					
+				}
+
 			}
 		}
 		.sign-with-otherway{

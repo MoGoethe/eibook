@@ -3,28 +3,72 @@
 <head>
 	<meta charset="UTF-8">
 	<title><%= name%></title>
-	<link rel="shortcut icon" href="./img/site/favicon.ico" /> 
-	<link rel="stylesheet" href="./css/base.css">
-	<link rel="stylesheet" href="./css/common.min.css">
-	<link rel="stylesheet" href="./css/eibook.min.css">
-	<link rel="stylesheet" href="./css/left-personal-menu.min.css">	
-	<link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="./lib/swiper/dist/css/swiper.min.css">
-	<link rel="stylesheet" href="./css/media-query.min.css">
+	<link rel="shortcut icon" href="/img/site/favicon.ico" /> 
+	<link rel="stylesheet" href="/css/base.css">
+	<link rel="stylesheet" href="/css/common.min.css">
+	<link rel="stylesheet" href="/css/eibook.min.css">
+	<link rel="stylesheet" href="/css/left-personal-menu.min.css">	
+	<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/lib/swiper/dist/css/swiper.min.css">
+	<link rel="stylesheet" href="/css/media-query.min.css">
 </head>
 <body>
-	<!-- 首页模块 -->
-	<%- include('./header') %>
-	<!-- 左侧菜单 -->
-	<%- include('./left_menu') %>
+	<div class="header">
+		<div class="header-main">
+			<div class="logo">
+				<a href="#" class="logo-title">EI'BOOK</a>
+			</div>
+			<div class="header-center">
+				<ul class="header-menu-list">
+					<li class="header-menu-list-item active"><a href="#"><i class="icon-globe"></i><span>首页</span></a></li>
+					<li class="header-menu-list-item"><a href="#"><i class="icon-leaf"></i><span>关注</span></a></li>
+					<li class="header-menu-list-item">
+						<a href="#"><i class="icon-bell"></i><span>消息</span></a>
+						<ul class="sec-header-menu">
+							<li class="sec-header-menu-item"><a href="javascript:;"><i class="icon-comments-alt"></i>评论</a></li>
+							<li class="sec-header-menu-item"><a href="javascript:;"><i class="icon-envelope-alt"></i>Ei'B 信</a></li>
+							<li class="sec-header-menu-item"><a href="javascript:;"><i class="icon-exchange"></i>换书请求</a></li>
+							<li class="sec-header-menu-item"><a href="javascript:;"><i class="icon-bookmark-empty"></i>关注和收藏</a></li>
+							<li class="sec-header-menu-item"><a href="javascript:;"><i class="icon-upload-alt"></i>旧书上架</a></li>
+							<li class="sec-header-menu-item"><a href="javascript:;"><i class="icon-heart-empty"></i>赞和喜欢</a></li>
+							<li class="sec-header-menu-item"><a href="javascript:;"><i class="icon-volume-up"></i>其他信息</a></li>
+						</ul>
+					</li>
+				</ul>
+				<div class="search-main">
+					<input type="text" placeholder="搜索">
+					<span class="search-btn"><i class="icon-search"></i></span>
+				</div>
+			</div>
+			<div class="user was-signed"> <!-- was-signed -->
+				<div class="user-photo">
+					<img src="/img/user/photo.png" alt="">
+				</div>
+				<div class="sign"><a class="signin" href="#">登陆</a><a class="common-top-btn" href="#"><i class="icon-signin"></i>注册</a></div>
+				<div class="package">
+					<a href="#" class="common-top-btn"><i class="icon-inbox"></i>我的书包</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="left-main">
+		<div class="left-menu">
+			<div class="item red"><i class="icon-user"></i></div>
+			<div class="item yellow"><i class="icon-bookmark"></i></div>
+			<div class="item green"><i class="icon-heart"></i></div>
+			<div class="item orange"><i class="icon-plus-sign-alt"></i></div>
+			<div class="item violet"><i class="icon-comments"></i></div>
+			<div class="item blue"><i class="icon-signout"></i></div>
+		</div>
+	</div>
 	<div class="main">
 		<div class="eibook-block mt40">
 			<div class="left-block">
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide" ><a href="#"><img src="./img/site/banner1.png" alt=""></a></div>
-						<div class="swiper-slide" ><a href="#"><img src="./img/site/banner2.jpg" alt=""></a></div>
-						<div class="swiper-slide" ><a href="#"><img src="./img/site/banner3.jpg" alt=""></a></div>
+						<div class="swiper-slide" ><a href="#"><img src="/img/site/banner1.png" alt=""></a></div>
+						<div class="swiper-slide" ><a href="#"><img src="/img/site/banner2.jpg" alt=""></a></div>
+						<div class="swiper-slide" ><a href="#"><img src="/img/site/banner3.jpg" alt=""></a></div>
 					</div>
 					<!-- Add Pagination -->
 					<div class="swiper-pagination swiper-pagination-white"></div>
@@ -62,12 +106,12 @@
 			<div class="book-item">
 				<div class="book-main">
 					<div class="book-img">
-						<img src="./img/book/book1.jpg" alt="">
+						<img src="/img/book/book1.jpg" alt="">
 					</div>
 					<div class="book-profile">
 						<h4><span class="bookname">皮囊</span><span class="classical">散文·文学</span></h4>
 						<p class="owner"><span class="name">小主：</span>seaseeYoul </p>
-						<p class="deal-style"><span class="name">交易方式：</span><span class="sale">可卖</span><span class="exchange">可换</span></p>
+						<p class="deal-style"><span class="name">交易：</span><span class="common-sale">可卖</span><span class="common-exchange">可换</span></p>
 						<p class="owner-profile"><span class="name">简介：</span>木心在《温莎墓园日记》的序中说自己偏爱第一人称写作：“......袋子是假的，袋子里的东西是真的。当袋子是真的时，袋子里的东西是假的了。”</p>
 					</div>
 				</div>
@@ -83,12 +127,12 @@
 			<div class="book-item">
 				<div class="book-main">
 					<div class="book-img">
-						<img src="./img/book/book1.jpg" alt="">
+						<img src="/img/book/book1.jpg" alt="">
 					</div>
 					<div class="book-profile">
 						<h4><span class="bookname">皮囊</span><span class="classical">散文·文学</span></h4>
 						<p class="owner"><span class="name">小主：</span>seaseeYoul </p>
-						<p class="deal-style"><span class="name">交易方式：</span><span class="sale">可卖</span><span class="exchange">可换</span></p>
+						<p class="deal-style"><span class="name">交易：</span><span class="common-sale">可卖</span><span class="common-exchange">可换</span></p>
 						<p class="owner-profile"><span class="name">简介：</span>木心在《温莎墓园日记》的序中说自己偏爱第一人称写作：“......袋子是假的，袋子里的东西是真的。当袋子是真的时，袋子里的东西是假的了。”</p>
 					</div>
 				</div>
@@ -104,12 +148,12 @@
 			<div class="book-item">
 				<div class="book-main">
 					<div class="book-img">
-						<img src="./img/book/book1.jpg" alt="">
+						<img src="/img/book/book1.jpg" alt="">
 					</div>
 					<div class="book-profile">
 						<h4><span class="bookname">皮囊</span><span class="classical">散文·文学</span></h4>
 						<p class="owner"><span class="name">小主：</span>seaseeYoul </p>
-						<p class="deal-style"><span class="name">交易方式：</span><span class="sale">可卖</span><span class="exchange">可换</span></p>
+						<p class="deal-style"><span class="name">交易：</span><span class="common-sale">可卖</span><span class="common-exchange">可换</span></p>
 						<p class="owner-profile"><span class="name">简介：</span>木心在《温莎墓园日记》的序中说自己偏爱第一人称写作：“......袋子是假的，袋子里的东西是真的。当袋子是真的时，袋子里的东西是假的了。”</p>
 					</div>
 				</div>
@@ -125,12 +169,12 @@
 			<div class="book-item">
 				<div class="book-main">
 					<div class="book-img">
-						<img src="./img/book/book1.jpg" alt="">
+						<img src="/img/book/book1.jpg" alt="">
 					</div>
 					<div class="book-profile">
 						<h4><span class="bookname">皮囊</span><span class="classical">散文·文学</span></h4>
 						<p class="owner"><span class="name">小主：</span>seaseeYoul </p>
-						<p class="deal-style"><span class="name">交易方式：</span><span class="sale">可卖</span><span class="exchange">可换</span></p>
+						<p class="deal-style"><span class="name">交易：</span><span class="common-sale">可卖</span><span class="common-exchange">可换</span></p>
 						<p class="owner-profile"><span class="name">简介：</span>木心在《温莎墓园日记》的序中说自己偏爱第一人称写作：“......袋子是假的，袋子里的东西是真的。当袋子是真的时，袋子里的东西是假的了。”</p>
 					</div>
 				</div>
@@ -146,12 +190,12 @@
 			<div class="book-item">
 				<div class="book-main">
 					<div class="book-img">
-						<img src="./img/book/book1.jpg" alt="">
+						<img src="/img/book/book1.jpg" alt="">
 					</div>
 					<div class="book-profile">
 						<h4><span class="bookname">皮囊</span><span class="classical">散文·文学</span></h4>
 						<p class="owner"><span class="name">小主：</span>seaseeYoul </p>
-						<p class="deal-style"><span class="name">交易方式：</span><span class="sale">可卖</span><span class="exchange">可换</span></p>
+						<p class="deal-style"><span class="name">交易：</span><span class="common-sale">可卖</span><span class="common-exchange">可换</span></p>
 						<p class="owner-profile"><span class="name">简介：</span>木心在《温莎墓园日记》的序中说自己偏爱第一人称写作：“......袋子是假的，袋子里的东西是真的。当袋子是真的时，袋子里的东西是假的了。”</p>
 					</div>
 				</div>
@@ -166,7 +210,7 @@
 			</div>
 		</div>
 	</div>
-<script src="./lib/swiper/dist/js/swiper.min.js"></script>
+<script src="/lib/swiper/dist/js/swiper.min.js"></script>
 <script>
 	var swiper = new Swiper('.swiper-container', {
 		pagination: '.swiper-pagination',
