@@ -48,12 +48,18 @@ user-select:none;}
 			width: 960px;
 			height: 58px;
 			margin: 0 auto;
-			.menu-list{
+			&:after{
+				@include floatFun();
+			}
+			.header-menu-list{
 				width: auto;
 				height: 58px;
 				float:left;
 				transition: margin-left  .35s;
-				a{
+				&:after{
+					@include floatFun();
+				}
+				.header-menu-list-item{
 					display: block;
 					height: 58px;
 					padding:0 15px;
@@ -62,24 +68,70 @@ user-select:none;}
 					line-height: 58px;					
 					float:left;
 					cursor: pointer;
-					&.active{
-						span,
-						i{
-							color: $mainColor;
-						}
-					}
+					position:relative;
 					&:hover{
 						background-color:#eee;
+						.sec-header-menu{
+							display: block;
+						}
 					}
-					i{
-						display: inline-block;
-						margin-right:5px;
-						font-size: 20px;
-						color: #333;
+					&.active{
+						a{
+							span,i{
+								color: $mainColor;
+							}				
+						}
+						&:hover{
+							background-color:#fff;
+						}
 					}
-					span{
-						font-size: 16px;
-						color: #333;
+					a{
+						display: block;
+						width: 100%;
+						height:100%;
+						i{
+							margin-right:5px;
+							font-size: 20px;
+							color: #333;
+						}
+						span{
+							font-size: 16px;
+							color: #333;
+						}
+					}
+					.sec-header-menu{
+						display: none;
+						width: 160px;
+						height: auto;
+						padding-bottom:10px;
+						position:absolute;
+						background-color:#fff;
+						top: 58px;
+						left: 0;
+						border-radius:3px;
+						box-shadow:2px 2px 7px rgba(0,0,0,.3),-2px -2px 7px rgba(0,0,0,.3);
+						li{
+							display: block;
+							width: 100%;
+							height: 48px;
+							line-height: 48px;
+							box-sizing: border-box;
+							padding-left: 20px;
+							font-size: 15px;
+							color: #333;
+							transition: background-color .25s;
+							text-align: left;
+							&:hover{
+								background-color:#eee;
+							}
+							a{
+								color: #555;
+								i{
+									margin-right: 10px;
+									color: $mainColor;
+								}
+							}
+						}
 					}
 				}
 			}

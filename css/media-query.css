@@ -39,9 +39,9 @@
         margin-top: 11px; } }
 
 @media screen and (max-width: 1080px) {
-  .header .header-main .header-center .menu-list {
+  .header .header-main .header-center .header-menu-list {
     margin-left: 70px; }
-    .header .header-main .header-center .menu-list a i {
+    .header .header-main .header-center .header-menu-list a i {
       display: inline-block; }
-    .header .header-main .header-center .menu-list a span {
+    .header .header-main .header-center .header-menu-list a span {
       display: none; } }
