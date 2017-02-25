@@ -1,9 +1,11 @@
-# EI'BOOK
+# EI'BOOK(going...,正在努力中，只有下班时间才能做。)
 
+* 打开git bash
+* git clone https://github.com/MoGoethe/eibook.git
+* npm i (苹果机器可能需要 sudo npm i )全局安装需要管理员权限
+* node server 
+* 打开浏览器，输入localhost:8080/login    用户名密码暂时可以使用admin完成登录功能，
 ###2017-02-06  start
-
-
-
 
 
 ##拦截
