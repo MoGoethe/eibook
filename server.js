@@ -27,6 +27,7 @@ const routerUser = require('./routes/user');		//用户中心
 const routerDiscover = require('./routes/discover');	//发现页
 const routerNotifications = require('./routes/notifications');	//消息页面
 const routerClassify = require('./routes/classify');	//消息页面
+const routerApi = require('./routes/api');	//接口
 
 //挂载路由
 app.use('/', routerIndex);
@@ -38,8 +39,15 @@ app.use('/', routerUser);
 app.use('/', routerDiscover);
 app.use('/', routerNotifications);
 app.use('/', routerClassify);
+app.use('/api', routerApi);
 
 //启动服务
-const server = app.listen(3001, function () {
-	console.log('server listening at http://127.0.0.1:3001');
+const server = app.listen(8080, function () {
+	console.log('server listening at http://127.0.0.1:8080');
 });
+
+
+
+
+
+
