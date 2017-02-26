@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="../css/base.css">
 	<link rel="stylesheet" href="../css/common.min.css">
 	<link rel="stylesheet" href="../css/login-register.min.css">
+	<link rel="stylesheet" href="../lib/authcode/css/authcode.css">
 	<link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
@@ -25,8 +26,8 @@
 					<input class="input-box password" type="text" placeholder="密码">
 				</div>
 				<div class="login-list" style="margin-top: -1px;">
-					<span class="input-icon"><i class="icon-repeat"></i></span>
-					<input class="input-box authcode" type="text" placeholder="验证码">
+					<span>ass</span>	
+					<div id="slider"></div>
 				</div>
 				<div class="login-list" style="height: 30px;">
 					<p class="action">
@@ -54,26 +55,54 @@
 		</div>
 	</div>
 <script src="../lib/particle/dev/particleground.all.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../lib/authcode/js/authcode.js"></script>
 <script>
-!(function(){
-	return new Particleground.wave( '.login-bg', {
-		num: 3,
-		lineColor: ['rgba(0, 190, 112, .5)', 'rgba(0, 190, 112, .7)', 'rgba(0, 190, 112, .9)'],
-		// 三条线依次的边框宽度
-		lineWidth: [ .5, .7, .9 ],
-		// 三条线依次的偏移值
-		offsetLeft: [ 2, 1, 0 ],
-		// 三条线都向下偏移容器高度的0.75倍, [ 0.75, 0.5, 0.3 ]
-		offsetTop: .85,
-		// 三条线依次的波峰高度
-		crestHeight: [ 8, 16, 24 ],
-		// 三条线都只有两个波峰(波纹)
-		rippleNum: 2,
-		speed: .01
-	});
-})()
+	!(function(){
+		return new Particleground.wave( '.login-bg', {
+			num: 3,
+			lineColor: ['rgba(0, 190, 112, .5)', 'rgba(0, 190, 112, .7)', 'rgba(0, 190, 112, .9)'],
+			// 三条线依次的边框宽度
+			lineWidth: [ .5, .7, .9 ],
+			// 三条线依次的偏移值
+			offsetLeft: [ 2, 1, 0 ],
+			// 三条线都向下偏移容器高度的0.75倍, [ 0.75, 0.5, 0.3 ]
+			offsetTop: .85,
+			// 三条线依次的波峰高度
+			crestHeight: [ 8, 16, 24 ],
+			// 三条线都只有两个波峰(波纹)
+			rippleNum: 2,
+			speed: .01
+		});
+	})()
 
-//登陆
+	//登陆
+	$(document).on('click','.login-btn',function(){
+		var username = $("#user").val();
+		var password = $("#password").val();
+		$.ajax({
+			url:'/api/login',
+			type:'POST',
+			data:{username:username,password:password},
+			dataType:'json',
+			success:function(data){
+				if(data.status){
+					window.location.href="/"
+				}else{
+					layer.msg('登录失败');
+				}
+			},  
+			error:function(data){
+				console.log(data);
+				layer.msg('服务器错误');
+			}
+		})
+	});
+    var defaults = {
+        id:'slider',
+        notice:'拖动滑块验证'
+    };
+    new sliderBar(defaults);
 </script>
 </body>
 </html>

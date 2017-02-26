@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="X-UA-Compatible" content="IE-Edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+<meta content="telephone=no" name="format-detection"> 
+<meta content="email=no" name="format-detection"> 
+<title>拖动滑块验证</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" href="">
+<style>
+*{ margin:0; padding:0; }
+body{ font:12px/1.125 Microsoft YaHei; background:#fff; }
+ul, li{ list-style:none; }
+a{ text-decoration:none; }
+
+</style>
+<link rel="stylesheet" href="./css/authcode.css">
+</head>
+<body>
+<div class="wrap">
+    <div id="slider">
+    </div>
+</div>
+ <script src="./js/authcode.js"></script>
+<script>
+    var defaults = {
+        id:'slider',
+        notice:'拖动滑块验证'
+    };
+    new sliderBar(defaults);
+</script>
+</body>
+</html>
