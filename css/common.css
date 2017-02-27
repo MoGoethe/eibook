@@ -108,35 +108,6 @@ body {
             .header .header-main .header-center .header-menu-list .header-menu-list-item a span {
               font-size: 16px;
               color: #333; }
-          .header .header-main .header-center .header-menu-list .header-menu-list-item .sec-header-menu {
-            display: none;
-            width: 160px;
-            height: auto;
-            padding-bottom: 10px;
-            position: absolute;
-            background-color: #fff;
-            top: 58px;
-            left: 0;
-            border-radius: 3px;
-            box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3), -2px -2px 7px rgba(0, 0, 0, 0.3); }
-            .header .header-main .header-center .header-menu-list .header-menu-list-item .sec-header-menu li {
-              display: block;
-              width: 100%;
-              height: 48px;
-              line-height: 48px;
-              box-sizing: border-box;
-              padding-left: 20px;
-              font-size: 15px;
-              color: #333;
-              transition: background-color .25s;
-              text-align: left; }
-              .header .header-main .header-center .header-menu-list .header-menu-list-item .sec-header-menu li:hover {
-                background-color: #eee; }
-              .header .header-main .header-center .header-menu-list .header-menu-list-item .sec-header-menu li a {
-                color: #555; }
-                .header .header-main .header-center .header-menu-list .header-menu-list-item .sec-header-menu li a i {
-                  margin-right: 10px;
-                  color: #12c48b; }
       .header .header-main .header-center .search-main {
         width: auto;
         float: left;
@@ -171,24 +142,60 @@ body {
           color: #666;
           border-radius: 100%;
           background-color: #dedede; }
+    .header .header-main .sec-header-menu {
+      display: none;
+      width: 160px;
+      height: auto;
+      padding-bottom: 10px;
+      position: absolute;
+      background-color: #fff;
+      top: 58px;
+      left: 0;
+      border-radius: 3px;
+      box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3), -2px -2px 7px rgba(0, 0, 0, 0.3); }
+      .header .header-main .sec-header-menu li {
+        display: block;
+        width: 100%;
+        height: 48px;
+        line-height: 48px;
+        box-sizing: border-box;
+        padding-left: 20px;
+        font-size: 15px;
+        color: #333;
+        transition: background-color .25s;
+        text-align: left; }
+        .header .header-main .sec-header-menu li:hover {
+          background-color: #eee; }
+        .header .header-main .sec-header-menu li a {
+          color: #555; }
+          .header .header-main .sec-header-menu li a i {
+            margin-right: 10px;
+            color: #12c48b !important; }
     .header .header-main .user {
       padding: 0 30px;
       height: 58px;
       position: absolute;
       right: 0;
       top: 0; }
-      .header .header-main .user .user-photo {
+      .header .header-main .user .user-main {
+        position: relative;
         width: 40px;
-        height: 40px;
-        overflow: hidden;
-        float: left;
-        border-radius: 100%;
-        margin: 9px 0;
-        position: relative; }
-        .header .header-main .user .user-photo img {
-          display: block;
+        height: 58px;
+        float: left; }
+        .header .header-main .user .user-main .user-photo {
           width: 40px;
-          height: 40px; }
+          height: 40px;
+          overflow: hidden;
+          float: left;
+          border-radius: 100%;
+          margin: 9px 0;
+          position: relative; }
+          .header .header-main .user .user-main .user-photo img {
+            display: block;
+            width: 40px;
+            height: 40px; }
+        .header .header-main .user .user-main:hover .sec-header-menu {
+          display: block; }
       .header .header-main .user .sign {
         float: left;
         background-color: #fff;

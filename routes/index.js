@@ -21,8 +21,9 @@ var router = express.Router();
 
 //第二个参数必须是一个函数；
 function data(req,res,next){
-	if(typeof req.session.__LOGINSTATUS !== 'undefined'){
+	if(typeof req.session.__LOGINSTATUS !== 'undefined' && typeof req.session.__USERID !== 'undefined'){
 		res.locals.login_status = req.session.__LOGINSTATUS;
+		res.locals.user_id = req.session.__USERID;
 		next();
 		return false;
 	}
