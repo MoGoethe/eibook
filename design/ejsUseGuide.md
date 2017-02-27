@@ -19,7 +19,7 @@
 
 ##引用
 <code>
-	<%- include(somePath/file) %>
+	<%- include("somePath/file") %>
 </code>
 
 

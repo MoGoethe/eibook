@@ -2,9 +2,21 @@
 
 const express = require('express');
 const consolidate= require('consolidate');
-
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const sessionFileStore = require('session-file-store')(session);
+//const setConfig = require('./config/site.Config.js');
 //创建服务
 const app = express();
+
+
+app.use(session({
+	//store:new sessionFileStore(), //服务器重开有效，session缓存
+	secret: 'eibook',
+	name: 'userlogin', 
+	resave: false,
+	saveUninitialized: true,
+}));
 
 //模板引擎设置
 app.engine("html",consolidate.ejs);

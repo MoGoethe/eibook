@@ -39,11 +39,14 @@
 				<span class="search-btn"><i class="icon-search"></i></span>
 			</div>
 		</div>
-		<div class="user was-signed"> <!-- was-signed -->
-			<div class="user-photo">
-				<img src="../img/user/photo.png" alt="">
-			</div>
-			<div class="sign"><a class="signin" href="#">登陆</a><a class="common-top-btn" href="#"><i class="icon-signin"></i>注册</a></div>
+		<div class="user"> <!-- was-signed -->
+			<% if(login_status){ %>
+				<div class="user-photo">
+					<a href="#"><img src="/img/user/photo.png" alt=""></a>
+				</div>
+			<%} else {%>
+				<div class="sign"><a class="signin" href="/login">登陆</a><a class="common-top-btn" href="#"><i class="icon-signin"></i>注册</a></div>
+			<% } %>
 			<div class="package">
 				<a href="#" class="common-top-btn"><i class="icon-inbox"></i>我的书包</a>
 			</div>
