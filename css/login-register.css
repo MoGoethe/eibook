@@ -19,7 +19,14 @@ html, body {
   background-color: transparent;
   height: 100%;
   width: 100%;
-  position: relative; }
+  min-height: 750px;
+  position: relative;
+  text-align: center; }
+  .login:after {
+    content: "";
+    display: inline-block;
+    height: 85%;
+    vertical-align: middle; }
   .login .login-logo {
     position: absolute;
     top: 5%;
@@ -31,21 +38,20 @@ html, body {
     font-size: 48px; }
   .login .login-content {
     width: 300px;
-    height: 422px;
+    height: auto;
     padding: 40px;
     z-index: 9;
-    position: absolute;
+    margin: 60px auto 0;
     background-color: #fff;
     box-shadow: 1px 1px 3px #bbb,-1px -1px 3px #bbb;
     border-radius: 7px;
-    left: 50%;
-    top: 50%;
-    margin-top: -320px;
-    margin-left: -200px; }
+    display: inline-block;
+    vertical-align: middle; }
     .login .login-content .login-main h2 {
       font-size: 22px;
       text-align: center;
-      padding: 20px 0 40px 0; }
+      padding: 20px 0 40px 0;
+      font-weight: normal; }
       .login .login-content .login-main h2 span {
         color: #666;
         margin: 0 10px;
@@ -68,7 +74,6 @@ html, body {
         padding: 5px 0 5px 40px;
         border: 1px solid #ccc;
         font-size: 14px;
-        border-radius: 5px;
         color: #666;
         background-color: #f9f9f9;
         transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; }
@@ -76,14 +81,12 @@ html, body {
           border-color: rgba(18, 196, 139, 0.8);
           z-index: 9;
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px rgba(18, 196, 139, 0.6); }
-        .login .login-content .login-main .login-list .input-box.user {
-          border-bottom-left-radius: 0;
-          border-bottom-right-radius: 0; }
-        .login .login-content .login-main .login-list .input-box.password {
-          border-radius: 0; }
-        .login .login-content .login-main .login-list .input-box.authcode {
-          border-top-left-radius: 0;
-          border-top-right-radius: 0; }
+        .login .login-content .login-main .login-list .input-box.last-input {
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px; }
+        .login .login-content .login-main .login-list .input-box.first-input {
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px; }
       .login .login-content .login-main .login-list .input-icon {
         position: absolute;
         z-index: 10;
@@ -113,15 +116,17 @@ html, body {
           background-color: #0cb17c; }
       .login .login-content .login-main .login-list .action {
         height: 30px;
-        line-height: 30px; }
+        line-height: 30px;
+        text-align: left; }
         .login .login-content .login-main .login-list .action .save {
           font-size: 13px;
           color: #666;
           cursor: pointer;
           margin-left: 5px; }
           .login .login-content .login-main .login-list .action .save #saveme {
-            vertical-align: -15%;
-            margin: 0; }
+            vertical-align: middle;
+            margin: 0;
+            cursor: pointer; }
           .login .login-content .login-main .login-list .action .save:hover {
             color: #333; }
         .login .login-content .login-main .login-list .action .forget-password {
@@ -151,15 +156,15 @@ html, body {
           background-color: #eee;
           position: absolute;
           left: 0;
-          top: 21px;
-          z-index: -1; }
+          top: 21px; }
         .login .login-content .sign-with-otherway .splice span {
           background-color: #fff;
           display: block;
-          margin: 0 auto;
-          padding: 0 5px;
+          margin: 0 85px;
           font-size: 12px;
-          width: 120px; }
+          width: 130px;
+          position: absolute;
+          text-align: center; }
       .login .login-content .sign-with-otherway .otherway-list {
         text-align: center; }
         .login .login-content .sign-with-otherway .otherway-list a {

@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Ei'BOOK</title>
+	<title>EIBOOK</title>
 	<link rel="shortcut icon" href="/img/site/favicon.ico" /> 
 	<link rel="stylesheet" href="/css/base.css">
 	<link rel="stylesheet" href="/css/common.min.css">
 	<link rel="stylesheet" href="/css/login-register.min.css">
+	<link rel="stylesheet" href="/lib/authcode/css/authcode.css">
 	<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
@@ -18,20 +19,19 @@
 				<h2><span>登录</span>·<a href="/register.html">注册</a></h2>
 				<div class="login-list">
 					<span class="input-icon"><i class="icon-user"></i></span>
-					<input class="input-box user" type="text" placeholder="用户名" id="user">
+					<input class="input-box first-input" id="user" type="text" placeholder="用户名">
 				</div>
 				<div class="login-list" style="margin-top: -1px;">
 					<span class="input-icon"><i class="icon-lock"></i></span>
-					<input class="input-box password" type="text" placeholder="密码" id="password">
+					<input class="input-box last-input" id="password" type="password" placeholder="密码">
 				</div>
-				<div class="login-list" style="margin-top: -1px;">
-					<span class="input-icon"><i class="icon-repeat"></i></span>
-					<input class="input-box authcode" type="text" placeholder="验证码">
+				<div class="login-list">
+					<div id="slider" class="auth-slide"></div>
 				</div>
-				<div class="login-list" style="height: 30px;">
+				<div class="login-list">
 					<p class="action">
 						<span class="save">
-  							<input type="checkbox" name="sex" id="saveme" />
+  							<input type="checkbox" name="saveme" id="saveme" />
   							<label for="saveme">记住我</label>
   						</span>
   						 <a href="#" class="forget-password">忘记密码？</a>
@@ -53,8 +53,9 @@
 			</div>
 		</div>
 	</div>
-<script src="/js/jquery.min.1.9.1.js"></script>
 <script src="/lib/particle/dev/particleground.all.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/lib/authcode/js/authcode.js"></script>
 <script src="/lib/layer/layer.js"></script>
 <script>
 	!(function(){
@@ -74,9 +75,19 @@
 			speed: .01
 		});
 	})()
+
+	//登陆
 	$(document).on('click','.login-btn',function(){
+		if(!$("#slider").hasClass("slide_ok")){
+			layer.msg('请先拖动滑块验证');
+			return false;
+		}
 		var username = $("#user").val();
 		var password = $("#password").val();
+		var savestatus = 0;
+		if( $("#saveme").is(':checked')){
+			savestatus = 1;
+		}
 		$.ajax({
 			url:'/api/login',
 			type:'POST',
@@ -94,7 +105,12 @@
 				layer.msg('服务器错误');
 			}
 		})
-	})
+	});
+    var defaults = {
+        id:'slider',
+        notice:'拖动滑块验证'
+    };
+    new sliderBar(defaults);
 </script>
 </body>
 </html>

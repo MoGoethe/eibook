@@ -3,34 +3,34 @@
 <head>
 	<meta charset="UTF-8">
 	<title>EIBOOK</title>
-	<link rel="shortcut icon" href="./img/site/favicon.ico" /> 
-	<link rel="stylesheet" href="./css/base.css">
-	<link rel="stylesheet" href="./css/common.min.css">
-	<link rel="stylesheet" href="./css/login-register.min.css">
-	<link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="../img/site/favicon.ico" /> 
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/common.min.css">
+	<link rel="stylesheet" href="../css/login-register.min.css">
+	<link rel="stylesheet" href="../lib/authcode/css/authcode.css">
+	<link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
 	<div class="login-bg"></div>
 	<div class="login">
 		<span class="login-logo">EI'BOOK</span>
-		<div class="login-content register">
+		<div class="login-content">
 			<div class="login-main">
-				<h2><a href="./login.html">登录</a>·<span>注册</span></h2>
+				<h2><a href="../login.html">登录</a>·<span>注册</span></h2>
 				<div class="login-list">
 					<span class="input-icon"><i class="icon-user"></i></span>
-					<input class="input-box user" type="text" placeholder="用户名">
+					<input class="input-box first-input" type="text" placeholder="用户名">
 				</div>
 				<div class="login-list" style="margin-top: -1px;">
 					<span class="input-icon"><i class="icon-lock"></i></span>
-					<input class="input-box password" type="text" placeholder="密码">
+					<input class="input-box" type="text" placeholder="密码">
 				</div>
 				<div class="login-list" style="margin-top: -1px;">
 					<span class="input-icon"><i class="icon-lock"></i></span>
-					<input class="input-box password" type="text" placeholder="重复密码">
+					<input class="input-box last-input" type="text" placeholder="重复密码">
 				</div>
-				<div class="login-list" style="margin-top: -1px;">
-					<span class="input-icon"><i class="icon-repeat"></i></span>
-					<input class="input-box authcode" type="text" placeholder="验证码">
+				<div class="login-list">
+					<div id="slider" class="auth-slide"></div>
 				</div>
 				<div class="login-list">
 					<span class="login-btn">注册</span>
@@ -48,7 +48,8 @@
 			</div>
 		</div>
 	</div>
-<script src="./lib/particle/dev/particleground.all.js"></script>
+<script src="../lib/particle/dev/particleground.all.js"></script>
+<script src="../lib/authcode/js/authcode.js"></script>
 <script>
 !(function(){
 	return new Particleground.wave( '.login-bg', {
@@ -68,6 +69,12 @@
 		speed: .01
 	});
 })()
+
+    var defaults = {
+        id:'slider',
+        notice:'拖动滑块验证'
+    };
+    new sliderBar(defaults);
 </script>
 </body>
 </html>
