@@ -21,13 +21,14 @@ var router = express.Router();
 
 //第二个参数必须是一个函数；
 function data(req,res,next){
+	res.locals.data = {};
 	if(typeof req.session.__LOGINSTATUS !== 'undefined' && typeof req.session.__USERID !== 'undefined'){
-		res.locals.login_status = req.session.__LOGINSTATUS;
-		res.locals.user_id = req.session.__USERID;
+		res.locals.data.login_status = req.session.__LOGINSTATUS;
+		res.locals.data.user_id = req.session.__USERID;
 		next();
 		return false;
 	}
-	res.locals.login_status = false;
+	res.locals.data.login_status = false;
 	next();
 }
 
