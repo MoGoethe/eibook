@@ -287,10 +287,12 @@
           height: 0;
           font-size: 0;
           zoom: 1; }
-        .usercenter .list-main .list-item .personal .personal-info .name a {
-          font-size: 15px;
-          color: #333;
-          font-weight: 700; }
+        .usercenter .list-main .list-item .personal .personal-info .name {
+          line-height: 20px; }
+          .usercenter .list-main .list-item .personal .personal-info .name a {
+            font-size: 15px;
+            color: #333;
+            font-weight: 700; }
         .usercenter .list-main .list-item .personal .personal-info .info-text {
           display: block;
           font-size: 12px;
