@@ -1,0 +1,856 @@
+<div class="left-block">
+	<div class="user-info ">
+		<div class="photo">
+			<a href="#"><img src="/img/user/photo.png" alt=""></a>
+		</div>
+		<div class="info-text">
+			<p class="name">Seaseeyoul</p>
+			<p class="my-info">
+				<a href="#">12<span>关注</span></a>
+				<a href="#">36<span>粉丝</span></a>
+				<a href="#">46<span>上架书籍</span></a>
+				<!-- <a href="#">12<span>已下架</span></a> // 当用户是自己的时候显示-->
+				<a href="#">128<span>收获喜欢</span></a>
+			</p>
+		</div>
+		<!--  当是用户本人时候不需要 显示 -->
+		<div class="action-tool">
+			<a href="#" class="action-btn send-meg">发Ei'B信</a>
+			<a href="#" class="action-btn add-following">+关注</a>
+		</div>
+	</div>
+	<div class="user-detail-info">
+		<div class="common-tab-content" tab-box="tab-box">
+			<div class="tab-title">
+			<% if(data.displayBlock.center||data.displayBlock.timeline||
+					data.displayBlock.comments||data.displayBlock.hot){ %>
+				
+				<a href="javascript:;" class="<%= data.displayBlock.center?'active':'' %>" 
+				box-name="center-box"><i class="icon-book"></i>书籍</a>
+				<a href="javascript:;" class="<%= data.displayBlock.timeline?'active':'' %>" 
+				box-name="timeline-box"><i class="icon-bell-alt"></i>动态</a>
+				<a href="javascript:;" class="<%= data.displayBlock.comments?'active':'' %>" 
+				box-name="comments-box"><i class="icon-comments"></i>最新评论</a>
+				<a href="javascript:;" class="<%= data.displayBlock.hot?'active':'' %>" 
+				box-name="hot-box"><i class="icon-fire"></i>热门</a>
+			
+			<% } else if(data.displayBlock.following||data.displayBlock.follower){ %>
+
+				<a href="javascript:;" class="<%= data.displayBlock.following?'active':'' %>" 
+				box-name="follow-box">关注用户<span>12</span></a>
+				<a href="javascript:;" class="<%= data.displayBlock.follower?'active':'' %>" 
+				box-name="follower-box">粉丝<span>35</span></a>
+
+			<% } else if(data.displayBlock.likes||data.displayBlock.classify){ %>
+
+				<a href="javascript:;" class="<%= data.displayBlock.classify?'active':'' %>" 
+				box-name="likes-box">关注的主题<span>7</span></a>
+				<a href="javascript:;" class="<%= data.displayBlock.likes?'active':'' %>" 
+				box-name="classify-box">喜欢的书<span>238</span></a>
+
+			<% } %>
+			</div>
+			<div class="tab-content">
+			<% if(data.displayBlock.center||data.displayBlock.timeline||
+					data.displayBlock.comments||data.displayBlock.hot){ %>
+				<div class="content-box center-list block" data-box="center-box">
+					<ul class="list-main">
+						<li class="list-item">
+							<div>
+								<div class="author">
+									<div class="author-photo">
+										<a href="#"><img src="/img/user/photo.png" alt=""></a>
+									</div>
+									<div class="author-info"><p><span class="black">seaseeYoul</span>2016.11.05 08:08</p></div>
+								</div>
+								<div class="book">
+									<div class="book-img">
+										<a href="#"><img src="/img/book/book1.jpg" alt=""></a>
+									</div>
+									<div class="book-info">
+										<h4>书目：<a href="#">皮囊</a></h4>
+										<p class="book-author">作者：<span class="black">蔡崇达</span> <span class="common-exchange">可换</span><span class="common-sale">可卖</span></p>
+										<p class="profile"><span class="name">介绍：</span>木心在《温莎墓园日记》的序中说自己偏爱第一人称写作：“......袋子是假的，袋子里的东西是真的。当袋子是真的时，袋子里的东西是假的了。”</p>
+									</div>
+								</div>
+								<div class="action">
+									<a href="#" class="watch"><i class="icon-eye-open"></i>78</a>
+									<a href="#" class="comments"><i class="icon-comment"></i>23</a>
+									<a href="#" class="laud"><i class="icon-heart"></i>31</a>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div>
+								<div class="author">
+									<div class="author-photo">
+										<a href="#"><img src="/img/user/photo.png" alt=""></a>
+									</div>
+									<div class="author-info"><p><span class="black">seaseeYoul</span>2016.11.05 08:08</p></div>
+								</div>
+								<div class="book">
+									<div class="book-img">
+										<a href="#"><img src="/img/book/book1.jpg" alt=""></a>
+									</div>
+									<div class="book-info">
+										<h4>书目：<a href="#">皮囊</a></h4>
+										<p class="book-author">作者：<span class="black">蔡崇达</span> <span class="common-sale">可卖</span></p>
+										<p class="profile"><span class="name">介绍：</span>木心在《温莎墓园日记》的序中说自己偏爱第一人称写作：“......袋子是假的，袋子里的东西是真的。当袋子是真的时，袋子里的东西是假的了。”</p>
+									</div>
+								</div>
+								<div class="action">
+									<a href="#" class="watch"><i class="icon-eye-open"></i>78</a>
+									<a href="#" class="comments"><i class="icon-comment"></i>23</a>
+									<a href="#" class="laud"><i class="icon-heart"></i>31</a>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div>
+								<div class="author">
+									<div class="author-photo">
+										<a href="#"><img src="/img/user/photo.png" alt=""></a>
+									</div>
+									<div class="author-info"><p><span class="black">seaseeYoul</span>2016.11.05 08:08</p></div>
+								</div>
+								<div class="book">
+									<div class="book-img">
+										<a href="#"><img src="/img/book/book1.jpg" alt=""></a>
+									</div>
+									<div class="book-info">
+										<h4>书目：<a href="#">皮囊</a></h4>
+										<p class="book-author">作者：<span class="black">蔡崇达</span> <span class="common-exchange">可换</span></p>
+										<p class="profile"><span class="name">介绍：</span>木心在《温莎墓园日记》的序中说自己偏爱第一人称写作：“......袋子是假的，袋子里的东西是真的。当袋子是真的时，袋子里的东西是假的了。”</p>
+									</div>
+								</div>
+								<div class="action">
+									<a href="#" class="watch"><i class="icon-eye-open"></i>78</a>
+									<a href="#" class="comments"><i class="icon-comment"></i>23</a>
+									<a href="#" class="laud"><i class="icon-heart"></i>31</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="content-box timeline-list" data-box="timeline-box">
+					<ul class="list-main">
+						<li class="list-item">
+							<div >
+								<div class="author">
+									<div class="author-photo">
+										<a href="#"><img src="/img/user/photo.png" alt=""></a>
+									</div>
+									<div class="author-info"><p><span class="black">seaseeYoul</span>发表了评论 · 2016.11.05 08:08</p></div>
+								</div>
+								<div class="comments">
+									<p class="text">厉害了~ 安梳颜~</p>
+								</div>
+								<div class="book quote">
+									<div class="book-img">
+										<a href="#"><img src="/img/book/book1.jpg" alt=""></a>
+									</div>
+									<div class="book-info">
+										<h4>书目：<a href="#">皮囊</a></h4>
+										<p class="book-author">作者：<span class="black">蔡崇达</span> <span class="common-exchange">可换</span></p>
+										<p class="profile"><span class="name">介绍：</span>木心在《温莎墓园日记》的序中说自己偏爱第一人称写作：“......袋子是假的，袋子里的东西是真的。当袋子是真的时，袋子里的东西是假的了。”</p>
+									</div>
+									<div class="action">
+										<a  href="#" class="name">安梳颜</a>
+										<a href="#" class="watch"><i class="icon-eye-open"></i>78</a>
+										<a href="#" class="comments"><i class="icon-comment"></i>23</a>
+										<a href="#" class="laud"><i class="icon-heart"></i>31</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div >
+								<div class="author">
+									<div class="author-photo">
+										<a href="#"><img src="/img/user/photo.png" alt=""></a>
+									</div>
+									<div class="author-info"><p><span class="black">seaseeYoul</span>喜欢了书目 · 2016.11.05 08:08</p></div>
+								</div>
+								<div class="book">
+									<div class="book-img">
+										<a href="#"><img src="/img/book/book1.jpg" alt=""></a>
+									</div>
+									<div class="book-info">
+										<h4>书目：<a href="#">皮囊</a></h4>
+										<p class="book-author">作者：<span class="black">蔡崇达</span> <span class="common-exchange">可换</span></p>
+										<p class="profile"><span class="name">介绍：</span>木心在《温莎墓园日记》的序中说自己偏爱第一人称写作：“......袋子是假的，袋子里的东西是真的。当袋子是真的时，袋子里的东西是假的了。”</p>
+									</div>
+								</div>
+								<div class="action">
+									<a  href="#" class="name">安梳颜</a>
+									<a href="#" class="watch"><i class="icon-eye-open"></i>78</a>
+									<a href="#" class="comments"><i class="icon-comment"></i>23</a>
+									<a href="#" class="laud"><i class="icon-heart"></i>31</a>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div>
+								<div class="author">
+									<div class="author-photo">
+										<a href="#"><img src="/img/user/photo.png" alt=""></a>
+									</div>
+									<div class="author-info"><p><span class="black">seaseeYoul</span>关注了作者 · 2016.11.05 08:08</p></div>
+								</div>
+								<div class="personal-author">
+									<div class="personal-author-info">
+										<div class="photo">
+											<a href="#"><img src="/img/user/photo.png" alt=""></a>
+										</div>
+										<div class="info-text">
+											<p class="name">莫 · 歌德</p>
+											<p class="info">上架18本书，被128人关注，获得了1339个喜欢。</p>
+										</div>
+										<div class="action">
+											<a href="javascript:;" class="action-btn" data-follow="true">已关注</a>
+										</div>
+									</div>
+									<div class="personal-author-profile">
+										<p class="text">早先就职淘宝UED，目前在好奇心日报参与创业，除了基本的项目开发，还偏好于前端工程化、网站性能...</p>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div>
+								<div class="author">
+									<div class="author-photo">
+										<a href="#"><img src="/img/user/photo.png" alt=""></a>
+									</div>
+									<div class="author-info"><p><span class="black">seaseeYoul</span>关注了作者 · 2016.11.05 08:08</p></div>
+								</div>
+								<div class="personal-author">
+									<div class="personal-author-info alone">
+										<div class="photo">
+											<a href="#"><img src="/img/user/photo.png" alt=""></a>
+										</div>
+										<div class="info-text">
+											<p class="name">莫 · 歌德</p>
+											<p class="info">上架18本书，被128人关注，获得了1339个喜欢。</p>
+										</div>
+										<div class="action">
+											<a href="javascript:;" class="action-btn" data-follow="true">已关注</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div>
+								<div class="author">
+									<div class="author-photo">
+										<a href="#"><img src="/img/user/photo.png" alt=""></a>
+									</div>
+									<div class="author-info"><p><span class="black">seaseeYoul</span>关注了作者 · 2016.11.05 08:08</p></div>
+								</div>
+								<div class="subject quote">
+									<div class="subject-photo">
+										<a href="#"><img src="/img/subject/subject.jpg" alt=""></a>
+									</div>
+									<div class="subject-info">
+										<p class="name">散文</p>
+										<p class="info"><a href="#">唐诗远</a>编，收录128本书目，1345人关注。</p>
+									</div>
+									<div class="action">
+										<a href="javascript:;" class="action-btn" data-follow="true">已关注</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div >
+								<div class="author">
+									<div class="author-photo">
+										<a href="#"><img src="/img/user/photo.png" alt=""></a>
+									</div>
+									<div class="author-info"><p><span class="black">seaseeYoul</span>喜欢了书目 · 2016.11.05 08:08</p></div>
+								</div>
+								<div class="book">
+									<div class="book-img">
+										<a href="#"><img src="/img/book/book1.jpg" alt=""></a>
+									</div>
+									<div class="book-info">
+										<h4>书目：<a href="#">皮囊</a></h4>
+										<p class="book-author">作者：<span class="black">蔡崇达</span> <span class="common-exchange">可换</span></p>
+										<p class="profile"><span class="name">介绍：</span>木心在《温莎墓园日记》的序中说自己偏爱第一人称写作：“......袋子是假的，袋子里的东西是真的。当袋子是真的时，袋子里的东西是假的了。”</p>
+									</div>
+								</div>
+								<div class="action">
+									<a  href="#" class="name">安梳颜</a>
+									<a href="#" class="watch"><i class="icon-eye-open"></i>78</a>
+									<a href="#" class="comments"><i class="icon-comment"></i>23</a>
+									<a href="#" class="laud"><i class="icon-heart"></i>31</a>
+								</div>
+							</div>
+						</li>
+					</ul>	</div>
+				<div class="content-box comments-list" data-box="comments-box">
+					<ul class="list-main">
+						<li class="list-item">
+							<div>
+								<div class="author">
+									<div class="author-photo">
+										<a href="#"><img src="/img/user/photo.png" alt=""></a>
+									</div>
+									<div class="author-info"><p><span class="black">seaseeYoul</span>2016.11.05 08:08</p></div>
+								</div>
+								<div class="book">
+									<div class="book-img">
+										<a href="#"><img src="/img/book/book1.jpg" alt=""></a>
+									</div>
+									<div class="book-info">
+										<h4>书目：<a href="#">皮囊</a></h4>
+										<p class="book-author">作者：<span class="black">蔡崇达</span> <span class="common-exchange">可换</span></p>
+										<p class="profile"><span class="name">介绍：</span>木心在《温莎墓园日记》的序中说自己偏爱第一人称写作：“......袋子是假的，袋子里的东西是真的。当袋子是真的时，袋子里的东西是假的了。”</p>
+									</div>
+								</div>
+								<div class="action">
+									<a href="#" class="watch"><i class="icon-eye-open"></i>78</a>
+									<a href="#" class="comments"><i class="icon-comment"></i>23</a>
+									<a href="#" class="laud"><i class="icon-heart"></i>31</a>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div>
+								<div class="author">
+									<div class="author-photo">
+										<a href="#"><img src="/img/user/photo.png" alt=""></a>
+									</div>
+									<div class="author-info"><p><span class="black">seaseeYoul</span>2016.11.05 08:08</p></div>
+								</div>
+								<div class="book">
+									<div class="book-img">
+										<a href="#"><img src="/img/book/book1.jpg" alt=""></a>
+									</div>
+									<div class="book-info">
+										<h4>书目：<a href="#">皮囊</a></h4>
+										<p class="book-author">作者：<span class="black">蔡崇达</span> <span class="common-exchange">可换</span></p>
+										<p class="profile"><span class="name">介绍：</span>木心在《温莎墓园日记》的序中说自己偏爱第一人称写作：“......袋子是假的，袋子里的东西是真的。当袋子是真的时，袋子里的东西是假的了。”</p>
+									</div>
+								</div>
+								<div class="action">
+									<a href="#" class="watch"><i class="icon-eye-open"></i>78</a>
+									<a href="#" class="comments"><i class="icon-comment"></i>23</a>
+									<a href="#" class="laud"><i class="icon-heart"></i>31</a>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div>
+								<div class="author">
+									<div class="author-photo">
+										<a href="#"><img src="/img/user/photo.png" alt=""></a>
+									</div>
+									<div class="author-info"><p><span class="black">seaseeYoul</span>2016.11.05 08:08</p></div>
+								</div>
+								<div class="book">
+									<div class="book-img">
+										<a href="#"><img src="/img/book/book1.jpg" alt=""></a>
+									</div>
+									<div class="book-info">
+										<h4>书目：<a href="#">皮囊</a></h4>
+										<p class="book-author">作者：<span class="black">蔡崇达</span> <span class="common-exchange">可换</span></p>
+										<p class="profile"><span class="name">介绍：</span>木心在《温莎墓园日记》的序中说自己偏爱第一人称写作：“......袋子是假的，袋子里的东西是真的。当袋子是真的时，袋子里的东西是假的了。”</p>
+									</div>
+								</div>
+								<div class="action">
+									<a href="#" class="watch"><i class="icon-eye-open"></i>78</a>
+									<a href="#" class="comments"><i class="icon-comment"></i>23</a>
+									<a href="#" class="laud"><i class="icon-heart"></i>31</a>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div>
+								<div class="author">
+									<div class="author-photo">
+										<a href="#"><img src="/img/user/photo.png" alt=""></a>
+									</div>
+									<div class="author-info"><p><span class="black">seaseeYoul</span>2016.11.05 08:08</p></div>
+								</div>
+								<div class="book">
+									<div class="book-img">
+										<a href="#"><img src="/img/book/book1.jpg" alt=""></a>
+									</div>
+									<div class="book-info">
+										<h4>书目：<a href="#">皮囊</a></h4>
+										<p class="book-author">作者：<span class="black">蔡崇达</span> <span class="common-exchange">可换</span></p>
+										<p class="profile"><span class="name">介绍：</span>木心在《温莎墓园日记》的序中说自己偏爱第一人称写作：“......袋子是假的，袋子里的东西是真的。当袋子是真的时，袋子里的东西是假的了。”</p>
+									</div>
+								</div>
+								<div class="action">
+									<a href="#" class="watch"><i class="icon-eye-open"></i>78</a>
+									<a href="#" class="comments"><i class="icon-comment"></i>23</a>
+									<a href="#" class="laud"><i class="icon-heart"></i>31</a>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div>
+								<div class="author">
+									<div class="author-photo">
+										<a href="#"><img src="/img/user/photo.png" alt=""></a>
+									</div>
+									<div class="author-info"><p><span class="black">seaseeYoul</span>2016.11.05 08:08</p></div>
+								</div>
+								<div class="book">
+									<div class="book-img">
+										<a href="#"><img src="/img/book/book1.jpg" alt=""></a>
+									</div>
+									<div class="book-info">
+										<h4>书目：<a href="#">皮囊</a></h4>
+										<p class="book-author">作者：<span class="black">蔡崇达</span> <span class="common-exchange">可换</span></p>
+										<p class="profile"><span class="name">介绍：</span>木心在《温莎墓园日记》的序中说自己偏爱第一人称写作：“......袋子是假的，袋子里的东西是真的。当袋子是真的时，袋子里的东西是假的了。”</p>
+									</div>
+								</div>
+								<div class="action">
+									<a href="#" class="watch"><i class="icon-eye-open"></i>78</a>
+									<a href="#" class="comments"><i class="icon-comment"></i>23</a>
+									<a href="#" class="laud"><i class="icon-heart"></i>31</a>
+								</div>
+							</div>
+						</li>
+					</ul>	</div>
+				<div class="content-box hot-list" data-box="hot-box">
+					<ul class="list-main">
+						<li class="list-item">
+							<div>
+								<div class="author">
+									<div class="author-photo">
+										<a href="#"><img src="/img/user/photo.png" alt=""></a>
+									</div>
+									<div class="author-info"><p><span class="black">seaseeYoul</span>2016.11.05 08:08</p></div>
+								</div>
+								<div class="book">
+									<div class="book-img">
+										<a href="#"><img src="/img/book/book1.jpg" alt=""></a>
+									</div>
+									<div class="book-info">
+										<h4>书目：<a href="#">皮囊</a></h4>
+										<p class="book-author">作者：<span class="black">蔡崇达</span> <span class="common-exchange">可换</span></p>
+										<p class="profile"><span class="name">介绍：</span>木心在《温莎墓园日记》的序中说自己偏爱第一人称写作：“......袋子是假的，袋子里的东西是真的。当袋子是真的时，袋子里的东西是假的了。”</p>
+									</div>
+								</div>
+								<div class="action">
+									<a href="#" class="watch"><i class="icon-eye-open"></i>78</a>
+									<a href="#" class="comments"><i class="icon-comment"></i>23</a>
+									<a href="#" class="laud"><i class="icon-heart"></i>31</a>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div>
+								<div class="author">
+									<div class="author-photo">
+										<a href="#"><img src="/img/user/photo.png" alt=""></a>
+									</div>
+									<div class="author-info"><p><span class="black">seaseeYoul</span>2016.11.05 08:08</p></div>
+								</div>
+								<div class="book">
+									<div class="book-img">
+										<a href="#"><img src="/img/book/book1.jpg" alt=""></a>
+									</div>
+									<div class="book-info">
+										<h4>书目：<a href="#">皮囊</a></h4>
+										<p class="book-author">作者：<span class="black">蔡崇达</span> <span class="common-exchange">可换</span></p>
+										<p class="profile"><span class="name">介绍：</span>木心在《温莎墓园日记》的序中说自己偏爱第一人称写作：“......袋子是假的，袋子里的东西是真的。当袋子是真的时，袋子里的东西是假的了。”</p>
+									</div>
+								</div>
+								<div class="action">
+									<a href="#" class="watch"><i class="icon-eye-open"></i>78</a>
+									<a href="#" class="comments"><i class="icon-comment"></i>23</a>
+									<a href="#" class="laud"><i class="icon-heart"></i>31</a>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div>
+								<div class="author">
+									<div class="author-photo">
+										<a href="#"><img src="/img/user/photo.png" alt=""></a>
+									</div>
+									<div class="author-info"><p><span class="black">seaseeYoul</span>2016.11.05 08:08</p></div>
+								</div>
+								<div class="book">
+									<div class="book-img">
+										<a href="#"><img src="/img/book/book1.jpg" alt=""></a>
+									</div>
+									<div class="book-info">
+										<h4>书目：<a href="#">皮囊</a></h4>
+										<p class="book-author">作者：<span class="black">蔡崇达</span> <span class="common-exchange">可换</span></p>
+										<p class="profile"><span class="name">介绍：</span>木心在《温莎墓园日记》的序中说自己偏爱第一人称写作：“......袋子是假的，袋子里的东西是真的。当袋子是真的时，袋子里的东西是假的了。”</p>
+									</div>
+								</div>
+								<div class="action">
+									<a href="#" class="watch"><i class="icon-eye-open"></i>78</a>
+									<a href="#" class="comments"><i class="icon-comment"></i>23</a>
+									<a href="#" class="laud"><i class="icon-heart"></i>31</a>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div>
+								<div class="author">
+									<div class="author-photo">
+										<a href="#"><img src="/img/user/photo.png" alt=""></a>
+									</div>
+									<div class="author-info"><p><span class="black">seaseeYoul</span>2016.11.05 08:08</p></div>
+								</div>
+								<div class="book">
+									<div class="book-img">
+										<a href="#"><img src="/img/book/book1.jpg" alt=""></a>
+									</div>
+									<div class="book-info">
+										<h4>书目：<a href="#">皮囊</a></h4>
+										<p class="book-author">作者：<span class="black">蔡崇达</span> <span class="common-exchange">可换</span></p>
+										<p class="profile"><span class="name">介绍：</span>木心在《温莎墓园日记》的序中说自己偏爱第一人称写作：“......袋子是假的，袋子里的东西是真的。当袋子是真的时，袋子里的东西是假的了。”</p>
+									</div>
+								</div>
+								<div class="action">
+									<a href="#" class="watch"><i class="icon-eye-open"></i>78</a>
+									<a href="#" class="comments"><i class="icon-comment"></i>23</a>
+									<a href="#" class="laud"><i class="icon-heart"></i>31</a>
+								</div>
+							</div>
+						</li>
+					</ul>	</div>
+			<% } else if(data.displayBlock.following||data.displayBlock.follower){ %>
+				<div class="content-box follow-list block" data-box="follow-box">
+					<ul class="list-main">
+						<li class="list-item">
+							<div>
+								<div class="personal">
+									<div class="personal-photo">
+										<a href="#"><img src="/img/user/photo.png" alt=""></a>
+									</div>
+									<div class="personal-info">
+										<h4 class="name"><a href="#">莫 · 歌德</a></h4>
+										<p class="info-text">
+											<span>关注 61</span>
+											<span>粉丝 128</span>
+											<span>上架书籍 18</span>
+											<span>类别 4</span>
+										</p>
+										<p class="info-text">一共上架了78本旧书，获得了438个喜欢</p>
+									</div>
+									<div class="personal-action">
+										<a href="#" class="action-btn" data-follow="true">√已关注</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div>
+								<div class="personal">
+									<div class="personal-photo">
+										<a href="#"><img src="/img/user/photo.png" alt=""></a>
+									</div>
+									<div class="personal-info">
+										<h4 class="name"><a href="#">莫 · 歌德</a></h4>
+										<p class="info-text">
+											<span>关注 61</span>
+											<span>粉丝 128</span>
+											<span>上架书籍 18</span>
+											<span>类别 4</span>
+										</p>
+										<p class="info-text">一共上架了78本旧书，获得了438个喜欢</p>
+									</div>
+									<div class="personal-action">
+										<a href="#" class="action-btn" data-follow="true">√已关注</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div>
+								<div class="personal">
+									<div class="personal-photo">
+										<a href="#"><img src="/img/user/photo.png" alt=""></a>
+									</div>
+									<div class="personal-info">
+										<h4 class="name"><a href="#">莫 · 歌德</a></h4>
+										<p class="info-text">
+											<span>关注 61</span>
+											<span>粉丝 128</span>
+											<span>上架书籍 18</span>
+											<span>类别 4</span>
+										</p>
+										<p class="info-text">一共上架了78本旧书，获得了438个喜欢</p>
+									</div>
+									<div class="personal-action">
+										<a href="#" class="action-btn" data-follow="true">√已关注</a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="content-box follower-list" data-box="follower-box">
+					<ul class="list-main">
+						<li class="list-item">
+							<div>	
+								<div class="personal">
+									<div class="personal-photo">
+										<a href="#"><img src="/img/user/photo.png" alt=""></a>
+									</div>
+									<div class="personal-info">
+										<h4 class="name"><a href="#">seaseeYoul</a></h4>
+										<p class="info-text">
+											<span>关注 61</span>
+											<span>粉丝 128</span>
+											<span>上架书籍 18</span>
+											<span>类别 4</span>
+										</p>
+										<p class="info-text">一共上架了78本旧书，获得了438个喜欢</p>
+									</div>
+									<div class="personal-action">
+										<a href="#" class="action-btn follow-btn" data-follow="false">+关注</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div>	
+								<div class="personal">
+									<div class="personal-photo">
+										<a href="#"><img src="/img/user/photo.png" alt=""></a>
+									</div>
+									<div class="personal-info">
+										<h4 class="name"><a href="#">莫 · 歌德</a></h4>
+										<p class="info-text">
+											<span>关注 61</span>
+											<span>粉丝 128</span>
+											<span>上架书籍 18</span>
+											<span>类别 4</span>
+										</p>
+										<p class="info-text">一共上架了78本旧书，获得了438个喜欢</p>
+									</div>
+									<div class="personal-action">
+										<a href="#" class="action-btn follow-btn" data-follow="false">+关注</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div>	
+								<div class="personal">
+									<div class="personal-photo">
+										<a href="#"><img src="/img/user/photo.png" alt=""></a>
+									</div>
+									<div class="personal-info">
+										<h4 class="name"><a href="#">莫 · 歌德</a></h4>
+										<p class="info-text">
+											<span>关注 61</span>
+											<span>粉丝 128</span>
+											<span>上架书籍 18</span>
+											<span>类别 4</span>
+										</p>
+										<p class="info-text">一共上架了78本旧书，获得了438个喜欢</p>
+									</div>
+									<div class="personal-action">
+										<a href="#" class="action-btn follow-btn" data-follow="false">+关注</a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			<% } else if(data.displayBlock.likes||data.displayBlock.classify){ %>
+				<div class="content-box likes-list block" data-box="likes-box">
+					<ul class="list-main">
+						<li class="list-item">
+							<div>
+								<div class="subject">
+									<div class="subject-photo">
+										<a href="#"><img src="/img/subject/subject.jpg" alt=""></a>
+									</div>
+									<div class="subject-info">
+										<p class="name">散文</p>
+										<p class="info"><a href="#">唐诗远</a>编，收录128本书目，1345人关注。</p>
+									</div>
+									<div class="action">
+										<a href="javascript:;" class="action-btn" data-follow="true">已关注</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div>
+								<div class="subject">
+									<div class="subject-photo">
+										<a href="#"><img src="/img/subject/subject.jpg" alt=""></a>
+									</div>
+									<div class="subject-info">
+										<p class="name">散文</p>
+										<p class="info"><a href="#">唐诗远</a>编，收录128本书目，1345人关注。</p>
+									</div>
+									<div class="action">
+										<a href="javascript:;" class="action-btn" data-follow="true">已关注</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div>
+								<div class="subject">
+									<div class="subject-photo">
+										<a href="#"><img src="/img/subject/subject.jpg" alt=""></a>
+									</div>
+									<div class="subject-info">
+										<p class="name">散文</p>
+										<p class="info"><a href="#">唐诗远</a>编，收录128本书目，1345人关注。</p>
+									</div>
+									<div class="action">
+										<a href="javascript:;" class="action-btn" data-follow="true">已关注</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div>
+								<div class="subject">
+									<div class="subject-photo">
+										<a href="#"><img src="/img/subject/subject.jpg" alt=""></a>
+									</div>
+									<div class="subject-info">
+										<p class="name">散文</p>
+										<p class="info"><a href="#">唐诗远</a>编，收录128本书目，1345人关注。</p>
+									</div>
+									<div class="action">
+										<a href="javascript:;" class="action-btn" data-follow="true">已关注</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div>
+								<div class="subject">
+									<div class="subject-photo">
+										<a href="#"><img src="/img/subject/subject.jpg" alt=""></a>
+									</div>
+									<div class="subject-info">
+										<p class="name">散文</p>
+										<p class="info"><a href="#">唐诗远</a>编，收录128本书目，1345人关注。</p>
+									</div>
+									<div class="action">
+										<a href="javascript:;" class="action-btn" data-follow="true">已关注</a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="content-box classify-list" data-box="classify-box">
+					<ul class="list-main">
+						<li class="list-item">
+							<div>
+								<div class="author">
+									<div class="author-photo">
+										<a href="#"><img src="/img/user/photo.png" alt=""></a>
+									</div>
+									<div class="author-info"><p><span class="black">seaseeYoul</span>2016.11.05 08:08</p></div>
+								</div>
+								<div class="book">
+									<div class="book-img">
+										<a href="#"><img src="/img/book/book1.jpg" alt=""></a>
+									</div>
+									<div class="book-info">
+										<h4>书目：<a href="#">皮囊</a></h4>
+										<p class="book-author">作者：<span class="black">蔡崇达</span> <span class="common-exchange">可换</span><span class="common-sale">可卖</span></p>
+										<p class="profile"><span class="name">介绍：</span>木心在《温莎墓园日记》的序中说自己偏爱第一人称写作：“......袋子是假的，袋子里的东西是真的。当袋子是真的时，袋子里的东西是假的了。”</p>
+									</div>
+								</div>
+								<div class="action">
+									<a href="#" class="watch"><i class="icon-eye-open"></i>78</a>
+									<a href="#" class="comments"><i class="icon-comment"></i>23</a>
+									<a href="#" class="laud"><i class="icon-heart"></i>31</a>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div>
+								<div class="author">
+									<div class="author-photo">
+										<a href="#"><img src="/img/user/photo.png" alt=""></a>
+									</div>
+									<div class="author-info"><p><span class="black">seaseeYoul</span>2016.11.05 08:08</p></div>
+								</div>
+								<div class="book">
+									<div class="book-img">
+										<a href="#"><img src="/img/book/book1.jpg" alt=""></a>
+									</div>
+									<div class="book-info">
+										<h4>书目：<a href="#">皮囊</a></h4>
+										<p class="book-author">作者：<span class="black">蔡崇达</span> <span class="common-exchange">可换</span><span class="common-sale">可卖</span></p>
+										<p class="profile"><span class="name">介绍：</span>木心在《温莎墓园日记》的序中说自己偏爱第一人称写作：“......袋子是假的，袋子里的东西是真的。当袋子是真的时，袋子里的东西是假的了。”</p>
+									</div>
+								</div>
+								<div class="action">
+									<a href="#" class="watch"><i class="icon-eye-open"></i>78</a>
+									<a href="#" class="comments"><i class="icon-comment"></i>23</a>
+									<a href="#" class="laud"><i class="icon-heart"></i>31</a>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div>
+								<div class="author">
+									<div class="author-photo">
+										<a href="#"><img src="/img/user/photo.png" alt=""></a>
+									</div>
+									<div class="author-info"><p><span class="black">seaseeYoul</span>2016.11.05 08:08</p></div>
+								</div>
+								<div class="book">
+									<div class="book-img">
+										<a href="#"><img src="/img/book/book1.jpg" alt=""></a>
+									</div>
+									<div class="book-info">
+										<h4>书目：<a href="#">皮囊</a></h4>
+										<p class="book-author">作者：<span class="black">蔡崇达</span> <span class="common-exchange">可换</span></p>
+										<p class="profile"><span class="name">介绍：</span>木心在《温莎墓园日记》的序中说自己偏爱第一人称写作：“......袋子是假的，袋子里的东西是真的。当袋子是真的时，袋子里的东西是假的了。”</p>
+									</div>
+								</div>
+								<div class="action">
+									<a href="#" class="watch"><i class="icon-eye-open"></i>78</a>
+									<a href="#" class="comments"><i class="icon-comment"></i>23</a>
+									<a href="#" class="laud"><i class="icon-heart"></i>31</a>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div>
+								<div class="author">
+									<div class="author-photo">
+										<a href="#"><img src="/img/user/photo.png" alt=""></a>
+									</div>
+									<div class="author-info"><p><span class="black">seaseeYoul</span>2016.11.05 08:08</p></div>
+								</div>
+								<div class="book">
+									<div class="book-img">
+										<a href="#"><img src="/img/book/book1.jpg" alt=""></a>
+									</div>
+									<div class="book-info">
+										<h4>书目：<a href="#">皮囊</a></h4>
+										<p class="book-author">作者：<span class="black">蔡崇达</span> <span class="common-exchange">可换</span></p>
+										<p class="profile"><span class="name">介绍：</span>木心在《温莎墓园日记》的序中说自己偏爱第一人称写作：“......袋子是假的，袋子里的东西是真的。当袋子是真的时，袋子里的东西是假的了。”</p>
+									</div>
+								</div>
+								<div class="action">
+									<a href="#" class="watch"><i class="icon-eye-open"></i>78</a>
+									<a href="#" class="comments"><i class="icon-comment"></i>23</a>
+									<a href="#" class="laud"><i class="icon-heart"></i>31</a>
+								</div>
+							</div>
+						</li>
+					</ul>	</div>
+			<% } %>
+			</div>
+		</div>
+	</div>
+</div>
