@@ -53,7 +53,7 @@
 			<div class="tab-content">
 			<% if(data.displayBlock.center||data.displayBlock.timeline||
 					data.displayBlock.comments||data.displayBlock.hot){ %>
-				<div class="content-box center-list block" data-box="center-box">
+				<div class="content-box center-list <%= data.displayBlock.center?' block':'' %>"" data-box="center-box">
 					<ul class="list-main">
 						<li class="list-item">
 							<div>
@@ -132,7 +132,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="content-box timeline-list" data-box="timeline-box">
+				<div class="content-box timeline-list <%= data.displayBlock.timeline?' block':'' %>" data-box="timeline-box">
 					<ul class="list-main">
 						<li class="list-item">
 							<div >
@@ -289,7 +289,7 @@
 							</div>
 						</li>
 					</ul>	</div>
-				<div class="content-box comments-list" data-box="comments-box">
+				<div class="content-box comments-list <%= data.displayBlock.comments?' block':'' %>" data-box="comments-box">
 					<ul class="list-main">
 						<li class="list-item">
 							<div>
@@ -417,7 +417,7 @@
 							</div>
 						</li>
 					</ul>	</div>
-				<div class="content-box hot-list" data-box="hot-box">
+				<div class="content-box hot-list <%= data.displayBlock.hot?' block':'' %>" data-box="hot-box">
 					<ul class="list-main">
 						<li class="list-item">
 							<div>
@@ -519,9 +519,10 @@
 								</div>
 							</div>
 						</li>
-					</ul>	</div>
+					</ul>	
+				</div>
 			<% } else if(data.displayBlock.following||data.displayBlock.follower){ %>
-				<div class="content-box follow-list block" data-box="follow-box">
+				<div class="content-box follow-list <%= data.displayBlock.following?' block':'' %>" data-box="follow-box">
 					<ul class="list-main">
 						<li class="list-item">
 							<div>
@@ -591,7 +592,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="content-box follower-list" data-box="follower-box">
+				<div class="content-box follower-list <%= data.displayBlock.follower?' block':'' %>" data-box="follower-box">
 					<ul class="list-main">
 						<li class="list-item">
 							<div>	
@@ -662,7 +663,7 @@
 					</ul>
 				</div>
 			<% } else if(data.displayBlock.likes||data.displayBlock.classify){ %>
-				<div class="content-box likes-list block" data-box="likes-box">
+				<div class="content-box likes-list <%= data.displayBlock.classify?' block':'' %>" data-box="likes-box">
 					<ul class="list-main">
 						<li class="list-item">
 							<div>
@@ -746,7 +747,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="content-box classify-list" data-box="classify-box">
+				<div class="content-box classify-list <%= data.displayBlock.likes?' block':'' %>" data-box="classify-box">
 					<ul class="list-main">
 						<li class="list-item">
 							<div>
@@ -848,7 +849,8 @@
 								</div>
 							</div>
 						</li>
-					</ul>	</div>
+					</ul>
+				</div>
 			<% } %>
 			</div>
 		</div>
