@@ -1,37 +1,41 @@
 <div class="header">
 	<div class="header-main">
 		<div class="logo">
-			<a href="#" class="logo-title">Ei'BOOK</a>
+			<a href="/" class="logo-title">Ei'BOOK</a>
 		</div>
 		<div class="header-center">
 			<ul class="header-menu-list">
-				<li class="header-menu-list-item active"><a href="#"><i class="icon-globe"></i><span>首页</span></a></li>
-				<li class="header-menu-list-item"><a href="#"><i class="icon-leaf"></i><span>关注</span></a></li>
+				<li class="header-menu-list-item active"><a href="/"><i class="icon-globe"></i><span>首页</span></a></li>
+				<li class="header-menu-list-item"><a href="<%= data.login_status ? '/' : '/login' %>"><i class="icon-leaf"></i><span>关注</span></a></li>
 				<li class="header-menu-list-item">
-					<a href="#"><i class="icon-bell"></i><span>消息</span></a>
+					<a href="<%= data.login_status ? '/notifications/comments' : '/login' %>">
+						<i class="icon-bell"></i><span>消息</span>
+					</a>
+				<% if(data.login_status){ %>
 					<ul class="sec-header-menu">
 						<li class="sec-header-menu-item">
-							<a href="javascript:;"><i class="icon-comments-alt"></i>评论</a>
+							<a href="/notifications/comments"><i class="icon-comments-alt"></i>评论</a>
 						</li>
 						<li class="sec-header-menu-item">
-							<a href="javascript:;"><i class="icon-envelope-alt"></i>Ei'B 信</a>
+							<a href="/notifications/messages"><i class="icon-envelope-alt"></i>Ei'B 信</a>
 						</li>
 						<li class="sec-header-menu-item">
-							<a href="javascript:;"><i class="icon-exchange"></i>换书请求</a>
+							<a href="/notifications/request"><i class="icon-exchange"></i>换书请求</a>
 						</li>
 						<li class="sec-header-menu-item">
-							<a href="javascript:;"><i class="icon-bookmark-empty"></i>关注和收藏</a>
+							<a href="/notifications/follow"><i class="icon-bookmark-empty"></i>关注和收藏</a>
 						</li>
 						<li class="sec-header-menu-item">
-							<a href="javascript:;"><i class="icon-upload-alt"></i>旧书上架</a>
+							<a href="/notifications/shelve"><i class="icon-upload-alt"></i>旧书上架</a>
 						</li>
 						<li class="sec-header-menu-item">
-							<a href="javascript:;"><i class="icon-heart-empty"></i>赞和喜欢</a>
+							<a href="/notifications/likes"><i class="icon-heart-empty"></i>赞和喜欢</a>
 						</li>
 						<li class="sec-header-menu-item">
-							<a href="javascript:;"><i class="icon-volume-up"></i>其他信息</a>
+							<a href="/notifications/others"><i class="icon-volume-up"></i>其他信息</a>
 						</li>
 					</ul>
+				<% } %>
 				</li>
 			</ul>
 			<div class="search-main">

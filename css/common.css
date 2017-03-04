@@ -167,7 +167,9 @@ body {
         .header .header-main .sec-header-menu li:hover {
           background-color: #eee; }
         .header .header-main .sec-header-menu li a {
-          color: #555; }
+          color: #555;
+          display: block;
+          height: 100%; }
           .header .header-main .sec-header-menu li a i {
             margin-right: 10px;
             color: #12c48b !important; }
