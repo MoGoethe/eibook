@@ -11,7 +11,7 @@ const app = express();
 
 
 app.use(session({
-	store:new sessionFileStore(), //服务器重开有效，session缓存
+	//store:new sessionFileStore(), //服务器重开有效，session缓存
 	secret: 'eibook',
 	name: 'userlogin', 
 	resave: false,
