@@ -55,7 +55,11 @@ app.use('/api', routerApi);
 
 //启动服务
 const server = app.listen(8088, function () {
+<<<<<<< HEAD
 	console.log('server listening at http://127.0.0.1:8089');
+=======
+	console.log('server listening at http://127.0.0.1:8088');
+>>>>>>> origin/br-server
 });
 
 
