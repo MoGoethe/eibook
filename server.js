@@ -9,15 +9,14 @@ const sessionFileStore = require('session-file-store')(session);
 //创建服务
 const app = express();
 
-/*
 app.use(session({
-	store:new sessionFileStore(), //服务器重开有效，session缓存
+	//store:new sessionFileStore(), //服务器重开有效，session缓存
 	secret: 'eibook',
 	name: 'userlogin', 
 	resave: false,
 	saveUninitialized: true,
 }));
-*/
+
 
 //模板引擎设置
 app.engine("html",consolidate.ejs);
@@ -55,8 +54,8 @@ app.use('/', routerClassify);
 app.use('/api', routerApi);
 
 //启动服务
-const server = app.listen(8080, function () {
-	console.log('server listening at http://127.0.0.1:8080');
+const server = app.listen(8088, function () {
+	console.log('server listening at http://127.0.0.1:8088');
 });
 
 
