@@ -9,7 +9,7 @@ const sessionFileStore = require('session-file-store')(session);
 //创建服务
 const app = express();
 
-
+/*
 app.use(session({
 	store:new sessionFileStore(), //服务器重开有效，session缓存
 	secret: 'eibook',
@@ -17,6 +17,7 @@ app.use(session({
 	resave: false,
 	saveUninitialized: true,
 }));
+*/
 
 //模板引擎设置
 app.engine("html",consolidate.ejs);
